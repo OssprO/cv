@@ -1,20 +1,71 @@
-<!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
-  <h1>
-    Welcome to {{ title }}!
-  </h1>
-  <img width="300" alt="Angular Logo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==">
-</div>
-<h2>Here are some links to help you start: </h2>
-<ul>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://angular.io/tutorial">Tour of Heroes</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://github.com/angular/angular-cli/wiki">CLI Documentation</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://blog.angular.io/">Angular blog</a></h2>
-  </li>
-</ul>
+<div class="container">
+  <div class="row">
+    <div class="col-8 py-5">
+      <h1>Jesús Osiel Hernández González</h1>
+      <time-circle></time-circle>
+      <p class="text-lvl1 title">Experiencia Laboral</p>
 
+      <div class="row my-3" *ngFor="let trabajo of experienciaLaboral">
+        <div class="col-color" [style.background]="trabajo.color"></div>
+        <div class="col">
+          <div class="row">
+            <div class="col-7">
+              <p class="text-lvl1 title">{{ trabajo.nombre }}</p>
+            </div>
+            <div class="col-5 text-right">
+              <p class="text-lvl1 subtitle">{{ trabajo.puesto }} {{ trabajo.inicio | date:'y' }}-{{ trabajo.final | date:'y' }}</p>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-12">
+              <p class="text-lvl2">{{ trabajo.descripcion }}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <p class="text-lvl1 title">Freelance / Proyectos Personales</p>
+
+      <div class="row my-3" *ngFor="let freelance of freelances">
+        <div class="col-color" [style.background]="freelance.color"></div>
+        <div class="col">
+          <div class="row">
+            <div class="col-12">
+              <p class="text-lvl1 title">{{ freelance.nombre }}</p>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-12">
+              <p class="text-lvl2">{{ freelance.descripcion }}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <div class="col-4 py-5 bg-light">
+      <h5 class="py-2">Desarrollador Front-End</h5>
+      <p class="text-lvl1">30 años</p>
+      <p class="text-lvl1">5532291215</p>
+      <p class="text-lvl1">Ciudad de México</p>
+      <p class="text-lvl1">ossprodiseno@gmail.com</p>
+      <br>
+      <p class="text-lvl2">Me gusta el rock progresivo, la ciencia ficción, el futbol, el dibujo, las artes plasticas y visuales y la cinematrografía. Me apasiona la astronomía y los avances científicos y tecnológicos. Soy beer geek y hago cerveza artesanal.</p>
+      <br>
+      <p class="text-lvl1 title">Idiomas</p>
+      <p class="text-lvl2"><strong>Inglés</strong>: 70% Hablado, 90% Leído, 70% Escrito, 85% Escuchado.</p>
+      <br>
+
+      <div class="mb-4" *ngFor="let habilidad of habilidades">
+        <p class="text-lvl1 title">{{habilidad.nombre}}</p>
+        <div *ngFor="let skill of habilidad.skills">
+          <p class="text-lvl2">{{skill.nombre}}</p>
+        </div>
+      </div>
+
+
+
+
+    </div>
+  </div>
+</div>

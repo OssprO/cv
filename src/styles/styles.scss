@@ -1,0 +1,66 @@
+body {
+  font-family: "Open Sans";
+}
+
+#elCanvas {
+  margin: auto;
+  width: 100%;
+  height: auto;
+}
+
+h1, h4, h5 {
+  font-family: "Open Sans" !important;
+  font-weight: 600;
+}
+
+p.text-lvl1 {
+  font-family: "Open Sans";
+  font-size: 18px;
+  font-weight: 300;
+  margin: 0;
+  &.title {
+    font-weight: 400;
+  }
+  &.subtitle {
+    font-size: 14px;
+    font-weight: 400;
+  }
+}
+p.text-lvl2 {
+  font-family: "Open Sans";
+  font-size: 14px;
+  font-weight: 300;
+  margin: 0;
+  &.title {
+    font-weight: 400;
+  }
+
+}
+
+.progress {
+  overflow: visible;
+  margin-bottom: 26px;
+  height: 6px;
+  border-radius: 0;
+  .progress-bar {
+    background-color: #5c4084;
+    position: relative;
+    border-radius: 0;
+    display: block;
+    float: right;
+    span {
+      color: #5c4084;
+      position: absolute;
+      top: -3px;
+      font-size: 10px;
+      line-height: 10px;
+      padding: 2px 3px 2px 4px;
+      right: -35px;
+    }
+  }
+}
+
+.col-color {
+  width: 15px;
+  background-color: #000000;
+}
