@@ -9,21 +9,21 @@ export class ExperienciaService {
   private experienciaObj = {
       educacion: [
         {
-            escuela: "CBTIS 130",
-            lugar: "Durango, Dgo. México",
-            titulo: "Técnico en Computación",
-            cedula: "5183946",
-            inicio: "01-01-2005",
-            final: "12-01-2005",
-            color: "#000000"
-        },
-        {
             escuela: "Instituto Tecnológico de Durango",
             lugar: "Durango, Dgo. México",
             titulo: "Ingeniería en Sistemas Computacionales",
             cedula: "8500626",
             inicio: "01-01-2006",
             final: "06-01-2010",
+            color: "#000000"
+        },
+        {
+            escuela: "CBTIS 130",
+            lugar: "Durango, Dgo. México",
+            titulo: "Técnico en Computación",
+            cedula: "5183946",
+            inicio: "01-01-2005",
+            final: "12-01-2005",
             color: "#000000"
         }
       ],
@@ -32,10 +32,28 @@ export class ExperienciaService {
             nombre: "Brewer Map",
             lugar: "CDMX, México",
             descripcion: "Proyecto personal. Desarrollo multiplataroma. Diseño, creación y mantenimiento de blog WordPress, app MEAN stack, redes sociales y contenidos.",
-            inicio: "03-01-2016",
-            final: "01-01-2018",
+            inicio: "07-01-2017",
+            final: "02-01-2018",
             color: "#776E5C",
             tecnologias: ["Angular", "NodeJS/Restify/Express", "MongoDB/Mongoose"]
+        },
+        {
+            nombre: "GICSA",
+            lugar: "CDMX, México",
+            descripcion: "Maquetación y adaptación resposiva de GICSA MagazINe.",
+            inicio: "04-01-2017",
+            final: "06-01-2017",
+            color: "#C3A15C",
+            tecnologias: ["SASS"] 
+        },
+        {
+            nombre: "Mercedes Trophy",
+            lugar: "CDMX, México",
+            descripcion: "Maquetación, adaptación resposiva y posterior adaptación a theme de WordPress para sitio Mercedes Trophy México 2016.",
+            inicio: "04-01-2016",
+            final: "06-01-2016",
+            color: "#FBD2B5",
+            tecnologias: ["WordPress","SASS"] 
         },
         {
             nombre: "CONAGUA",
@@ -72,7 +90,7 @@ export class ExperienciaService {
             lugar: "CDMX, México",
             descripcion: "Desarrollo Smart TV, administrador y creador de contenido de la comunidad de desarrolladores Samsung Smart TV. Desarrollo y diseño web, creación de temas y plugins para WordPress. Desarrollo Mobile Ionic y Phonegaph. Desarrollo MEAN Stack.",
             inicio: "09-01-2013",
-            final: "01-02-2018",
+            final: "02-02-2018",
             color: "#EEBC9E",
             tecnologias: ["AS3/Flex/AIR", "Ionic", "WordPress", ]
         },

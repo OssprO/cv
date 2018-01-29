@@ -2,7 +2,20 @@
   <div class="row">
     <div class="col-8 py-5">
       <h1>Jesús Osiel Hernández González</h1>
+      
+      <div class="cv-black-boxes-wrapper">
+
+        <div class="cv-black-box" *ngFor="let escuela of educacion">
+          <p class="text-lvl1 subtitle">{{escuela.escuela}}</p>
+          <p class="text-lvl1 subtitle">{{escuela.lugar}}</p>
+          <p class="text-lvl2 title"><strong>{{escuela.titulo}}</strong></p>
+          <p class="text-lvl2">Cedula {{escuela.cedula}}</p>
+        </div>
+
+      </div>
+
       <time-circle></time-circle>
+
       <p class="text-lvl1 title">Experiencia Laboral</p>
 
       <div class="row my-3" *ngFor="let trabajo of experienciaLaboral">
@@ -58,8 +71,40 @@
 
       <div class="mb-4" *ngFor="let habilidad of habilidades">
         <p class="text-lvl1 title">{{habilidad.nombre}}</p>
+        
+
         <div *ngFor="let skill of habilidad.skills">
-          <p class="text-lvl2">{{skill.nombre}}</p>
+          <div class="row" *ngIf="skill.porcentaje > 0">
+            <div class="col-4 pr-1">
+              <p class="text-lvl2">{{skill.nombre}}</p>
+            </div>
+            <div class="col-7 px-1">
+              <div class="progress">
+                <div class="progress-bar" role="progressbar" [attr.aria-valuenow]="skill.porcentaje" aria-valuemin="0" aria-valuemax="100" [style.width.%]="skill.porcentaje">
+                </div>
+              </div>
+            </div>
+            <div class="col-1 pl-1">
+                <p class="text-lvl3">{{skill.porcentaje}}%</p>
+              </div>
+          </div>
+          <p class="text-lvl2" *ngIf="skill.porcentaje == 0">{{skill.nombre}}</p>
+          <div *ngFor="let subskill of skill.skills">
+            <div class="row">
+              <div class="col-4 pl-4 pr-1">
+                <p class="text-lvl2">{{subskill.nombre}}</p>
+              </div>
+              <div class="col-7 px-1">
+                <div class="progress" *ngIf="subskill.porcentaje > 0">
+                  <div class="progress-bar" role="progressbar" [attr.aria-valuenow]="subskill.porcentaje" aria-valuemin="0" aria-valuemax="100" [style.width.%]="subskill.porcentaje">
+                  </div>
+                </div>
+              </div>
+              <div class="col-1 pl-1">
+                <p class="text-lvl3">{{subskill.porcentaje}}%</p>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
 

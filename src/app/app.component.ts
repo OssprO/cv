@@ -16,6 +16,7 @@ export class AppComponent implements OnInit {
   habilidades:Habilidad[] = [];
   experienciaLaboral:Trabajo[] = [];
   freelances:Freelance[] = [];
+  educacion:Educacion[] = [];
 
   constructor(
     private _habiliadesService:HabilidadesService,
@@ -27,6 +28,7 @@ export class AppComponent implements OnInit {
     this.habilidades = this._habiliadesService.getHabilidades();
     this.experienciaLaboral = this._experienciaService.getExperienciaLaboral();
     this.freelances = this._experienciaService.getFreelances();
+    this.educacion = this._experienciaService.getEducacion();
   }
 
 }

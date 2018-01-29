@@ -6,7 +6,7 @@ export class HabilidadesService {
 
   private skillsObj:Habilidad[] = [
         {
-          nombre: 'Lenguajes de programación y frameworks',
+          nombre: 'Lenguajes y frameworks',
           skills: [
               {
                 nombre: 'HTML/HTML5',
@@ -28,14 +28,14 @@ export class HabilidadesService {
                 skills: [
                   {
                     nombre: 'jQuery',
-                    porcentaje: 90
+                    porcentaje: 80
                   },
                   {
                     nombre: 'AngularJS',
                     porcentaje: 80
                   },
                   {
-                    nombre: 'Angular',
+                    nombre: 'Angular 2+',
                     porcentaje: 50
                   },
                   {
@@ -124,6 +124,10 @@ export class HabilidadesService {
           nombre: "Herramientas",
           skills: [
             {
+              nombre: 'Typescript',
+              porcentaje: 0
+            },
+            {
               nombre: 'Grunt / Gulp / Webpack',
               porcentaje: 0
             },
@@ -161,7 +165,11 @@ export class HabilidadesService {
               porcentaje: 0
             },
             {
-              nombre: "Ardiuno",
+              nombre: "Arduino",
+              porcentaje: 0
+            },
+            {
+              nombre: "Docker",
               porcentaje: 0
             },
             {
