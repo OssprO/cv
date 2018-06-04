@@ -18,7 +18,7 @@ export class TimeCircleComponent implements OnInit {
   private ADJUSTMENT:number = -40;
 
   protected initialYear:number = 2005;
-  protected finalYear:number = 2017;
+  protected finalYear:number = 2018;
   protected difYears:number;
   protected gradosYear:number;
 

@@ -33,7 +33,7 @@ export class ExperienciaService {
             lugar: "CDMX, México",
             descripcion: "Proyecto personal. Desarrollo multiplataroma. Diseño, creación y mantenimiento de blog WordPress, app MEAN stack, redes sociales y contenidos.",
             inicio: "07-01-2017",
-            final: "02-01-2018",
+            final: "08-01-2018",
             color: "#776E5C",
             tecnologias: ["Angular", "NodeJS/Restify/Express", "MongoDB/Mongoose"]
         },
@@ -52,7 +52,7 @@ export class ExperienciaService {
             descripcion: "Maquetación, adaptación resposiva y posterior adaptación a theme de WordPress para sitio Mercedes Trophy México 2016.",
             inicio: "04-01-2016",
             final: "06-01-2016",
-            color: "#FBD2B5",
+            color: "#E0C4A1",
             tecnologias: ["WordPress","SASS"] 
         },
         {
@@ -85,14 +85,24 @@ export class ExperienciaService {
       ],
       trabajo: [
         {
+            nombre: "GFT México",
+            puesto: "Desarrollador Front-End",
+            lugar: "CDMX, México",
+            descripcion: "Desarrollo front-end de plataforma iBrain. Proyecto Cells BBVBA Bancomer.",
+            inicio: "03-05-2018",
+            final: "08-09-2018",
+            color: "#A1755B", 
+            tecnologias: ["Angular", "SCSS"]
+        },
+        {
             nombre: "Apernet S.A. / Minimalist Technology",
             puesto: "Desarrollador Front-End",
             lugar: "CDMX, México",
             descripcion: "Desarrollo Smart TV, administrador y creador de contenido de la comunidad de desarrolladores Samsung Smart TV. Desarrollo y diseño web, creación de temas y plugins para WordPress. Desarrollo Mobile Ionic y Phonegaph. Desarrollo MEAN Stack.",
             inicio: "09-01-2013",
-            final: "02-02-2018",
+            final: "02-28-2018",
             color: "#EEBC9E",
-            tecnologias: ["AS3/Flex/AIR", "Ionic", "WordPress", ]
+            tecnologias: ["AS3/Flex/AIR", "Ionic", "WordPress" ]
         },
         {
             nombre: "Denumeris Interactive",

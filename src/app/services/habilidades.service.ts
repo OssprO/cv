@@ -24,22 +24,26 @@ export class HabilidadesService {
               },
               {
                 nombre: 'Javascript',
-                porcentaje: 60,
+                porcentaje: 70,
                 skills: [
-                  {
-                    nombre: 'jQuery',
-                    porcentaje: 80
-                  },
                   {
                     nombre: 'AngularJS',
                     porcentaje: 80
                   },
                   {
                     nombre: 'Angular 2+',
+                    porcentaje: 75
+                  },
+                  {
+                    nombre: 'jQuery',
                     porcentaje: 50
                   },
                   {
                     nombre: 'Node/Restify/Express',
+                    porcentaje: 30
+                  },
+                  {
+                    nombre: 'Polymer 2',
                     porcentaje: 30
                   },
                   {
@@ -50,7 +54,7 @@ export class HabilidadesService {
               },
               {
                 nombre: 'AS3/Flex/AIR',
-                porcentaje: 90
+                porcentaje: 95
               },
               {
                 nombre: 'PHP',
@@ -148,7 +152,7 @@ export class HabilidadesService {
               porcentaje: 0
             },
             {
-              nombre: 'Sublime Text / Atom',
+              nombre: 'Sublime Text / Atom / Visual Studio Code',
               porcentaje: 0
             }
           ]
