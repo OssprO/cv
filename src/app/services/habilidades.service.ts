@@ -4,7 +4,7 @@ import { Habilidad } from '../interfaces/habilidad.interface';
 @Injectable()
 export class HabilidadesService {
 
-  private skillsObj:Habilidad[] = [
+  private skillsObj: Habilidad[] = [
         {
           nombre: 'Lenguajes y frameworks',
           skills: [
@@ -13,7 +13,7 @@ export class HabilidadesService {
                 porcentaje: 85
               },
               {
-                nombre: 'CSS3',
+                nombre: 'CSS3/Flexbox/Grid',
                 porcentaje: 85,
                 skills: [
                   {
@@ -32,7 +32,7 @@ export class HabilidadesService {
                   },
                   {
                     nombre: 'Angular 2+',
-                    porcentaje: 75
+                    porcentaje: 85
                   },
                   {
                     nombre: 'jQuery',
@@ -43,8 +43,8 @@ export class HabilidadesService {
                     porcentaje: 30
                   },
                   {
-                    nombre: 'Polymer 2',
-                    porcentaje: 30
+                    nombre: 'Polymer/LitElement',
+                    porcentaje: 40
                   },
                   {
                     nombre: 'React',
@@ -80,7 +80,7 @@ export class HabilidadesService {
                   },
                   {
                     nombre: 'Swift',
-                    porcentaje: 25
+                    porcentaje: 15
                   }
                 ]
               }
@@ -108,7 +108,7 @@ export class HabilidadesService {
           ]
         },
         {
-          nombre: "Diseño",
+          nombre: 'Diseño',
           skills: [
             {
               nombre: 'Photoshop',
@@ -121,11 +121,15 @@ export class HabilidadesService {
             {
               nombre: 'InDesign',
               porcentaje: 85
+            },
+            {
+              nombre: 'Sketch',
+              porcentaje: 40
             }
           ]
         },
         {
-          nombre: "Herramientas",
+          nombre: 'Herramientas',
           skills: [
             {
               nombre: 'Typescript',
@@ -144,7 +148,7 @@ export class HabilidadesService {
               porcentaje: 0
             },
             {
-              nombre: 'Git / Github / SVN',
+              nombre: 'Git: Github, Gitlab y Bitbucket',
               porcentaje: 0
             },
             {
@@ -158,59 +162,59 @@ export class HabilidadesService {
           ]
         },
         {
-          nombre: "Plataformas y Tecnologías",
+          nombre: 'Plataformas y Tecnologías',
           skills: [
             {
-              nombre: "Samsung Smart TV: Tizen",
+              nombre: 'Samsung Smart TV: Tizen',
               porcentaje: 0
             },
             {
-              nombre: "Interfaces Multitouch: Displax, PQLabs",
+              nombre: 'Interfaces Multitouch: Displax, PQLabs',
               porcentaje: 0
             },
             {
-              nombre: "Arduino",
+              nombre: 'Arduino',
               porcentaje: 0
             },
             {
-              nombre: "Docker",
+              nombre: 'Docker',
               porcentaje: 0
             },
             {
-              nombre: "Mac OS X / Linux Ubuntu / Windows",
+              nombre: 'Mac OS X / Linux Ubuntu / Windows',
               porcentaje: 0
             }
           ]
         },
         {
-          nombre: "Otros",
+          nombre: 'Otros',
           skills: [
             {
-              nombre: "Paquetería Office / iWork",
+              nombre: 'Paquetería Office / iWork',
               porcentaje: 0
             },
             {
-              nombre: "Maquetación y envío de Newsletters",
+              nombre: 'Maquetación y envío de Newsletters',
               porcentaje: 0
             },
             {
-              nombre: "Google Analytics",
+              nombre: 'Google Analytics',
               porcentaje: 0
             },
             {
-              nombre: "API Google Maps",
+              nombre: 'API Google Maps',
               porcentaje: 0
             },
             {
-              nombre: "Configuración de Servidores (SSH, FTP, DNS, EmailServer, Usuarios, Permisos)",
+              nombre: 'Configuración de Servidores (SSH, FTP, DNS, EmailServer, Usuarios, Permisos)',
               porcentaje: 0
             },
             {
-              nombre: "Facebook Pages",
+              nombre: 'Facebook Pages',
               porcentaje: 0
             },
             {
-              nombre: "Edición de Video y Audio (After Effects, Audition)",
+              nombre: 'Edición de Video y Audio (After Effects, Audition)',
               porcentaje: 0
             }
           ]
