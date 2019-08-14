@@ -20,8 +20,8 @@ private experienciaObj = {
             lugar: 'Durango, Dgo. México',
             titulo: 'Ingeniería en Sistemas Computacionales',
             cedula: '8500626',
-            inicio: '01-01-2006',
-            final: '06-01-2010',
+            inicio: '2006-01-01T00:00:00Z',
+            final: '2010-01-06T00:00:00Z',
             color: '#000000'
         },
         {
@@ -29,8 +29,8 @@ private experienciaObj = {
             lugar: 'Durango, Dgo. México',
             titulo: 'Técnico en Computación',
             cedula: '5183946',
-            inicio: '01-01-2005',
-            final: '12-01-2005',
+            inicio: '2005-01-01T00:00:00Z',
+            final: '2005-01-12T00:00:00Z',
             color: '#000000'
         }
       ],
@@ -39,8 +39,8 @@ private experienciaObj = {
             nombre: 'Brewer Map',
             lugar: 'CDMX, México',
             descripcion: 'Proyecto personal. Desarrollo multiplataroma. Diseño, creación y mantenimiento de blog WordPress, app MEAN stack, redes sociales y contenidos.',
-            inicio: '07-01-2017',
-            final: '08-01-2018',
+            inicio: '2017-01-07T00:00:00Z',
+            final: '2018-01-08T00:00:00Z',
             color: '#776E5C',
             tecnologias: ['Angular', 'NodeJS/Restify/Express', 'MongoDB/Mongoose']
         },
@@ -48,8 +48,8 @@ private experienciaObj = {
             nombre: 'GICSA',
             lugar: 'CDMX, México',
             descripcion: 'Maquetación y adaptación resposiva de GICSA MagazINe.',
-            inicio: '04-01-2017',
-            final: '06-01-2017',
+            inicio: '2017-01-04T00:00:00Z',
+            final: '2017-01-06T00:00:00Z',
             color: '#C3A15C',
             tecnologias: ['SCSS']
         },
@@ -57,8 +57,8 @@ private experienciaObj = {
             nombre: 'Mercedes Trophy',
             lugar: 'CDMX, México',
             descripcion: 'Maquetación, adaptación resposiva y posterior adaptación a theme de WordPress para sitio Mercedes Trophy México 2016.',
-            inicio: '04-01-2016',
-            final: '06-01-2016',
+            inicio: '2016-01-04T00:00:00Z',
+            final: '2016-01-06T00:00:00Z',
             color: '#E0C4A1',
             tecnologias: ['WordPress', 'SCSS']
         },
@@ -66,8 +66,8 @@ private experienciaObj = {
             nombre: 'CONAGUA',
             lugar: 'CDMX, México',
             descripcion: 'Diseño y programación de sistema de búsqueda de documentos de la Comisión Nacional del Agua (Flex/AIR/SQLLite).',
-            inicio: '03-01-2012',
-            final: '01-01-2013',
+            inicio: '2012-01-03T00:00:00Z',
+            final: '2013-01-01T00:00:00Z',
             color: '#F7E4BE',
             tecnologias: ['AS3/Flex/AIR']
         },
@@ -75,8 +75,8 @@ private experienciaObj = {
             nombre: 'YEAL/Artefacto',
             lugar: 'Durango, Dgo. México',
             descripcion: 'Prácticas profesionales, desarrollo y diseño del juego ‘PokTaPok’ para iPhone y iPod Touch.  Subcontrato de la empresa de creación multimedia Artefacto Studio.',
-            inicio: '01-01-2010',
-            final: '07-01-2010',
+            inicio: '2010-01-01T00:00:00Z',
+            final: '2010-01-07T00:00:00Z',
             color: '#B7A98D',
             tecnologias: ['Photoshop', 'Unity3D']
         },
@@ -84,8 +84,8 @@ private experienciaObj = {
             nombre: 'OptimusTEC',
             lugar: 'Durango, Dgo. México',
             descripcion: 'Fundador, diseñador y encargado de maquetación de la revista estudiantíl OptimusTEC, diseño de logotipo, diseño de lonas, fotógrafo y edición fotográfica, redacción de artículos, gestor de promoción y diseñador del sitio oficial de la revista.',
-            inicio: '08-01-2006',
-            final: '12-01-2009',
+            inicio: '2006-01-08T00:00:00Z',
+            final: '2009-01-12T00:00:00Z',
             color: '#776E5C',
             tecnologias: ['InDesing', 'Photoshop']
         }
@@ -96,8 +96,8 @@ private experienciaObj = {
             puesto: 'Líder Front-End / Desarrollador Front-End ',
             lugar: 'CDMX, México',
             descripcion: 'Líder técnico Front-End para proyecto Santander Móvil, al frente de 6 células de trabajo y responsable de integración y despliegue de una app híbrida para iOS y Android. Desarrollo front-end de plataforma iBrain. Proyecto Cells BBVBA Bancomer.',
-            inicio: '03-05-2018',
-            final: '08-01-2019',
+            inicio: '2018-05-03T00:00:00Z',
+            final: '2019-01-08T00:00:00Z',
             color: '#A1755B',
             tecnologias: ['Angular', 'SCSS']
         },
@@ -106,8 +106,8 @@ private experienciaObj = {
             puesto: 'Desarrollador Front-End',
             lugar: 'CDMX, México',
             descripcion: 'Desarrollo Smart TV, administrador y creador de contenido de la comunidad de desarrolladores Samsung Smart TV. Desarrollo y diseño web, creación de temas y plugins para WordPress. Desarrollo Mobile Ionic y Phonegaph. Desarrollo MEAN Stack.',
-            inicio: '09-01-2013',
-            final: '02-28-2018',
+            inicio: '2013-01-09T00:00:00Z',
+            final: '2018-28-02T00:00:00Z',
             color: '#EEBC9E',
             tecnologias: ['AS3/Flex/AIR', 'Ionic', 'WordPress' ]
         },
@@ -116,8 +116,8 @@ private experienciaObj = {
             puesto: 'Desarrollador Interactivo',
             lugar: 'CDMX, México',
             descripcion: 'Desarrollo multimedia, programación de interfaces multitouch para muros y pantallas interactivas , así como aplicaciones móviles. Creación de sitios web y aplicaciones de escritorio Flash/ActionScript/Flex. Programación del modulo interactivo Periscopio en el Museo de Arte Contemporaneo de la UNAM.',
-            inicio: '10-01-2010',
-            final: '08-01-2013',
+            inicio: '2010-01-10T00:00:00Z',
+            final: '2013-01-08T00:00:00Z',
             color: '#B38184',
             tecnologias: ['AS3/Flex/AIR', 'Swift']
         },
@@ -126,8 +126,8 @@ private experienciaObj = {
             puesto: 'Desarrollador',
             lugar: 'Durango, Dgo. México',
             descripcion: 'Desarrollo y diseño de aplicaciones y sistemas administrativos para control y mantenimiento de bases de datos.',
-            inicio: '01-01-2010',
-            final: '09-01-2010',
+            inicio: '2010-01-01T00:00:00Z',
+            final: '2010-01-09T00:00:00Z',
             color: '#786573',
             tecnologias: ['PHP']
         },
@@ -136,8 +136,8 @@ private experienciaObj = {
             puesto: 'Desarrollador/Diseñador Web',
             lugar: 'Durango, Dgo. México',
             descripcion: 'Realización de presentaciones multimedia para diversas dependencias de gobierno, video streaming, contenido interactivo Flash en el sitio, diseño gráfico y maquetación, fotografía y edición fotográfica, diseño de elementos para diversos sistemas de información.',
-            inicio: '11-01-2007',
-            final: '11-01-2008',
+            inicio: '2007-01-11T00:00:00Z',
+            final: '2008-01-11T00:00:00Z',
             color: '#49414E',
             tecnologias: ['AS3/Flex/AIR', 'Illustrator', 'Photoshop']
         },
