@@ -32,15 +32,15 @@ export class HabilidadesService {
                   },
                   {
                     nombre: 'Angular 2+',
-                    porcentaje: 85
+                    porcentaje: 90
                   },
                   {
                     nombre: 'jQuery',
-                    porcentaje: 50
+                    porcentaje: 20
                   },
                   {
                     nombre: 'Node/Restify/Express',
-                    porcentaje: 30
+                    porcentaje: 40
                   },
                   {
                     nombre: 'Polymer/LitElement',
@@ -49,12 +49,16 @@ export class HabilidadesService {
                   {
                     nombre: 'React',
                     porcentaje: 10
+                  },
+                  {
+                    nombre: 'Vue.js',
+                    porcentaje: 25
                   }
                 ]
               },
               {
                 nombre: 'AS3/Flex/AIR',
-                porcentaje: 95
+                porcentaje: 90
               },
               {
                 nombre: 'PHP',
@@ -73,10 +77,6 @@ export class HabilidadesService {
                   {
                     nombre: 'Ionic',
                     porcentaje: 75
-                  },
-                  {
-                    nombre: 'Ionic 2',
-                    porcentaje: 50
                   },
                   {
                     nombre: 'Swift',
