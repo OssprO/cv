@@ -9,7 +9,7 @@ import { Mathematical } from '../../modules/mathematical';
 })
 export class TimeCircleComponent implements OnInit {
 
-  @ViewChild('TimeCircle') timeCircle: ElementRef;
+  @ViewChild('TimeCircle', { static: true }) timeCircle: ElementRef;
   private timeCircleContext: CanvasRenderingContext2D;
 
   private GRADOS_APERTURA = 295; //DEGREES

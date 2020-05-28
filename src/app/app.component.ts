@@ -9,18 +9,18 @@ import { Educacion } from './interfaces/educacion.interface';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  styleUrls: ['./app.component.scss']
 })
 export class AppComponent implements OnInit {
 
-  habilidades:Habilidad[] = [];
-  experienciaLaboral:Trabajo[] = [];
-  freelances:Freelance[] = [];
-  educacion:Educacion[] = [];
+  habilidades: Habilidad[] = [];
+  experienciaLaboral: Trabajo[] = [];
+  freelances: Freelance[] = [];
+  educacion: Educacion[] = [];
 
   constructor(
-    private _habiliadesService:HabilidadesService,
-    private _experienciaService:ExperienciaService) {
+    private _habiliadesService: HabilidadesService,
+    private _experienciaService: ExperienciaService) {
 
   }
 
