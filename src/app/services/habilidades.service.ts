@@ -9,16 +9,20 @@ export class HabilidadesService {
       nombre: 'Lenguajes y frameworks',
       skills: [
         {
-          nombre: 'HTML/HTML5',
+          nombre: 'HTML / HTML5',
           porcentaje: 85
         },
         {
-          nombre: 'CSS3/Flexbox/Grid',
+          nombre: 'CSS3 / Flexbox / Grid',
           porcentaje: 85,
           skills: [
             {
-              nombre: 'Bootstrap 3/4',
+              nombre: 'Bootstrap',
               porcentaje: 90
+            },
+            {
+              nombre: 'Tailwind',
+              porcentaje: 40
             }
           ]
         },
@@ -39,11 +43,11 @@ export class HabilidadesService {
               porcentaje: 20
             },
             {
-              nombre: 'Node/Restify/Express',
+              nombre: 'Node / Restify / Express',
               porcentaje: 40
             },
             {
-              nombre: 'Polymer/LitElement',
+              nombre: 'Polymer / LitElement',
               porcentaje: 40
             },
             {
@@ -104,6 +108,14 @@ export class HabilidadesService {
         {
           nombre: 'MongoDB / Mongoose',
           porcentaje: 70
+        },
+        {
+          nombre: 'GraphQL',
+          porcentaje: 50
+        },
+        {
+          nombre: 'Firebase',
+          porcentaje: 30
         }
       ]
     },
@@ -177,6 +189,10 @@ export class HabilidadesService {
           porcentaje: 0
         },
         {
+          nombre: 'Raspberry Pi',
+          porcentaje: 0
+        },
+        {
           nombre: 'Docker',
           porcentaje: 0
         },
@@ -190,11 +206,11 @@ export class HabilidadesService {
       nombre: 'Otros',
       skills: [
         {
-          nombre: 'Paquetería Office / iWork',
+          nombre: 'Office / iWork / Libre Office',
           porcentaje: 0
         },
         {
-          nombre: 'Maquetación y envío de Newsletters',
+          nombre: 'Newsletters y Mailing',
           porcentaje: 0
         },
         {

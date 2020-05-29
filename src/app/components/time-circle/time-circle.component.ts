@@ -1,6 +1,6 @@
 import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
 import { ExperienciaService } from '../../services/experiencia.service';
-import { Mathematical } from '../../modules/mathematical';
+import { Mathematical } from '../../models/mathematical';
 
 @Component({
   selector: 'app-time-circle',
@@ -17,8 +17,8 @@ export class TimeCircleComponent implements OnInit {
   private RADIO = this.CANVAS_SIZE / 2.075;
   private ADJUSTMENT = -40;
 
-  protected initialYear = 2005;
-  protected finalYear = 2020;
+  protected initialYear = 2005; // TODO: Calculate this automatically
+  protected finalYear = 2020; // TODO: Calculate this automatically
   protected difYears: number;
   protected gradosYear: number;
 
@@ -83,8 +83,14 @@ export class TimeCircleComponent implements OnInit {
     const inicioDate = new Date(inicio);
     const finalDate = new Date(final);
 
-    let initialAngle =  Mathematical.radians(gradosYear*(inicioDate.getFullYear()-this.initialYear) + gradosMonth*(inicioDate.getMonth()) + this.ADJUSTMENT);
-    let finalAngle =  Mathematical.radians(gradosYear*(finalDate.getFullYear()-this.initialYear) + gradosMonth*(finalDate.getMonth()) + this.ADJUSTMENT);
+    const initialAngle = Mathematical.radians(
+      gradosYear * (
+        inicioDate.getFullYear() - this.initialYear
+      ) + gradosMonth * ( inicioDate.getMonth() ) + this.ADJUSTMENT);
+    const finalAngle =  Mathematical.radians(
+      gradosYear * (
+        finalDate.getFullYear() - this.initialYear
+      ) + gradosMonth * ( finalDate.getMonth() ) + this.ADJUSTMENT);
 
     this.timeCircleContext.lineWidth = grueso;
     this.timeCircleContext.beginPath();
@@ -97,15 +103,5 @@ export class TimeCircleComponent implements OnInit {
       false);
     this.timeCircleContext.strokeStyle = color;
     this.timeCircleContext.stroke();
-  }
-
-  // Converts from degrees to radians.
-  public mathRadians(degrees) {
-    return degrees * Math.PI / 180;
-  }
-
-  // Converts from radians to degrees.
-  public mathDegrees(radians) {
-    return radians * 180 / Math.PI;
   }
 }
