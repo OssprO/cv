@@ -3,7 +3,7 @@ import { ExperienciaService } from '../../services/experiencia.service';
 import { Mathematical } from '../../modules/mathematical';
 
 @Component({
-  selector: 'time-circle',
+  selector: 'app-time-circle',
   templateUrl: './time-circle.component.html',
   styleUrls: ['./time-circle.component.scss']
 })
@@ -12,13 +12,13 @@ export class TimeCircleComponent implements OnInit {
   @ViewChild('TimeCircle', { static: true }) timeCircle: ElementRef;
   private timeCircleContext: CanvasRenderingContext2D;
 
-  private GRADOS_APERTURA = 295; //DEGREES
+  private GRADOS_APERTURA = 295;
   private CANVAS_SIZE = 800;
   private RADIO = this.CANVAS_SIZE / 2.075;
   private ADJUSTMENT = -40;
 
   protected initialYear = 2005;
-  protected finalYear = 2019;
+  protected finalYear = 2020;
   protected difYears: number;
   protected gradosYear: number;
 
@@ -28,10 +28,6 @@ export class TimeCircleComponent implements OnInit {
 
   ngOnInit() {
     this.timeCircleContext = (this.timeCircle.nativeElement as HTMLCanvasElement).getContext('2d');
-    this.init();
-  }
-
-  init() {
     this.experiencia = this._experienciaService.getExperiencia();
     this.drawYearLines();
     this.parseData(this.experiencia);

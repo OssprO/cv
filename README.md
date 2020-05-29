@@ -1,4 +1,4 @@
-# CV2018
+# CV OssprO
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.6.3.
 
@@ -13,6 +13,17 @@ Run `ng generate component component-name` to generate a new component. You can 
 ## Build
 
 Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
+
+### Build and Deploy for Github Pages
+
+First you have to run 
+`ng build --prod --base-href "https://<username>.github.io/my-app/"`
+
+If you don’t have angular-cli-ghpages installed globally in your system,
+`npm install -g angular-cli-ghpages`
+
+Then just deploy
+`angular-cli-ghpages --dir=dist/angular-app`
 
 ## Running unit tests
 

@@ -1,9 +1,9 @@
 export module Mathematical {
 
-  export function radians(degrees: number): number {
-    return degrees * Math.PI / 180;
+  export function radians(grados: number): number {
+    return grados * Math.PI / 180;
   }
-  export function degrees(radians: number): number {
-    return radians * 180 / Math.PI;
+  export function degrees(radianes: number): number {
+    return radianes * 180 / Math.PI;
   }
 }
