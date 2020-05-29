@@ -36,6 +36,7 @@ export class ExperienciaService {
       {
         nombre: 'Brewer Map',
         lugar: 'CDMX, México',
+        // tslint:disable-next-line: max-line-length
         descripcion: 'Proyecto personal. Desarrollo multiplataroma. Diseño, creación y mantenimiento de blog WordPress, app MEAN stack, redes sociales y contenidos.',
         inicio: '2017-07-01T00:00:00Z',
         final: '2020-08-01T00:00:00Z',
@@ -63,6 +64,7 @@ export class ExperienciaService {
       {
         nombre: 'Mercedes Trophy',
         lugar: 'CDMX, México',
+        // tslint:disable-next-line: max-line-length
         descripcion: 'Maquetación, adaptación resposiva y posterior adaptación a theme de WordPress para sitio Mercedes Trophy México 2016.',
         inicio: '2016-04-01T00:00:00Z',
         final: '2016-06-01T00:00:00Z',
@@ -81,6 +83,7 @@ export class ExperienciaService {
       {
         nombre: 'YEAL/Artefacto',
         lugar: 'Durango, Dgo. México',
+        // tslint:disable-next-line: max-line-length
         descripcion: 'Prácticas profesionales, desarrollo y diseño del juego ‘PokTaPok’ para iPhone y iPod Touch.  Subcontrato de la empresa de creación multimedia Artefacto Studio.',
         inicio: '2010-01-01T00:00:00Z',
         final: '2010-07-01T00:00:00Z',
@@ -90,6 +93,7 @@ export class ExperienciaService {
       {
         nombre: 'OptimusTEC',
         lugar: 'Durango, Dgo. México',
+        // tslint:disable-next-line: max-line-length
         descripcion: 'Fundador, diseñador y encargado de maquetación de la revista estudiantíl OptimusTEC, diseño de logotipo, diseño de lonas, fotógrafo y edición fotográfica, redacción de artículos, gestor de promoción y diseñador del sitio oficial de la revista.',
         inicio: '2006-08-01T00:00:00Z',
         final: '2009-12-01T00:00:00Z',
@@ -112,6 +116,7 @@ export class ExperienciaService {
         nombre: 'GFT México',
         puesto: 'Líder Front-End / Desarrollador Front-End ',
         lugar: 'CDMX, México',
+        // tslint:disable-next-line: max-line-length
         descripcion: 'Líder técnico Front-End para proyecto Santander Móvil, al frente de 6 células de trabajo y responsable de integración y despliegue de una app híbrida para iOS y Android. Desarrollo Front-End de plataforma iBrain. Proyecto Cells BBVBA Bancomer.',
         inicio: '2018-03-05T00:00:00Z',
         final: '2019-12-01T00:00:00Z',
@@ -122,6 +127,7 @@ export class ExperienciaService {
         nombre: 'Apernet S.A. / Minimalist Technology',
         puesto: 'Desarrollador Front-End',
         lugar: 'CDMX, México',
+        // tslint:disable-next-line: max-line-length
         descripcion: 'Desarrollo Smart TV, administrador y creador de contenido de la comunidad de desarrolladores Samsung Smart TV. Desarrollo y diseño web, creación de temas y plugins para WordPress. Desarrollo Mobile Ionic y Phonegaph. Desarrollo MEAN Stack.',
         inicio: '2013-09-01T00:00:00Z',
         final: '2018-02-28T00:00:00Z',
@@ -132,6 +138,7 @@ export class ExperienciaService {
         nombre: 'Denumeris Interactive',
         puesto: 'Desarrollador Interactivo',
         lugar: 'CDMX, México',
+        // tslint:disable-next-line: max-line-length
         descripcion: 'Desarrollo multimedia, programación de interfaces multitouch para muros y pantallas interactivas , así como aplicaciones móviles. Creación de sitios web y aplicaciones de escritorio Flash/ActionScript/Flex. Programación del modulo interactivo Periscopio en el Museo de Arte Contemporaneo de la UNAM.',
         inicio: '2010-10-01T00:00:00Z',
         final: '2013-08-01T00:00:00Z',
@@ -152,6 +159,7 @@ export class ExperienciaService {
         nombre: 'Oficina de Asesoría en Modernización y Tecnologías de Información Gobierno Municipal de Durango',
         puesto: 'Desarrollador/Diseñador Web',
         lugar: 'Durango, Dgo. México',
+        // tslint:disable-next-line: max-line-length
         descripcion: 'Realización de presentaciones multimedia para diversas dependencias de gobierno, video streaming, contenido interactivo Flash en el sitio, diseño gráfico y maquetación, fotografía y edición fotográfica, diseño de elementos para diversos sistemas de información.',
         inicio: '2007-11-01T00:00:00Z',
         final: '2008-11-01T00:00:00Z',

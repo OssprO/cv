@@ -2,13 +2,20 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { TimeCircleComponent } from './time-circle.component';
 
+import { ExperienciaService } from '../../services/experiencia.service';
+
 describe('TimeCircleComponent', () => {
   let component: TimeCircleComponent;
   let fixture: ComponentFixture<TimeCircleComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ TimeCircleComponent ]
+      declarations: [
+        TimeCircleComponent
+      ],
+      providers: [
+        ExperienciaService
+      ]
     })
     .compileComponents();
   }));

@@ -1,7 +1,7 @@
 <div class="container">
   <div class="row">
     <div class="col-12 col-md-8 py-5">
-      <h1>Jesús Osiel Hernández González</h1>
+      <h1>{{personal.nombre}}</h1>
 
       <div class="cv-black-boxes-wrapper">
 
@@ -57,16 +57,20 @@
 
     </div>
     <div class="col-12 col-md-4 py-5 bg-light">
-      <h5 class="py-2">Desarrollador Front-End</h5>
+      <h5 class="py-2">{{personal.puesto}}</h5>
       <p class="text-lvl1">32 años</p>
-      <p class="text-lvl1">5532291215</p>
-      <p class="text-lvl1">Ciudad de México</p>
-      <p class="text-lvl1">ossprodiseno@gmail.com</p>
+      <p class="text-lvl1"><a [href]="'tel:521' + personal.telefono">{{personal.telefono}}</a></p>
+      <p class="text-lvl1">{{personal.residencia}}</p>
+      <p class="text-lvl1"><a [href]="'mailto:'+ personal.email">{{personal.email}}</a></p>
       <br>
-      <p class="text-lvl2">Me gusta el rock progresivo, la ciencia ficción, el futbol, las artes plásticas y visuales y la cinematrografía. Me apasiona la astronomía y los avances científicos y tecnológicos. Se hacer cerveza a nivel profesional, tengo título como Técnico Cervecero.</p>
+      <p class="text-lvl2">{{personal.presentacion}}</p>
+      <br>
+      <p class="text-lvl2">{{personal.resumen}}</p>
       <br>
       <p class="text-lvl1 title">Idiomas</p>
-      <p class="text-lvl2"><strong>Inglés</strong>: 70% Hablado, 90% Leído, 70% Escrito, 85% Escuchado.</p>
+      <p class="text-lvl2" *ngFor="let idioma of personal.idiomas">
+        <strong>{{idioma.nombre}}</strong>: {{idioma.nivel}}
+      </p>
       <br>
 
       <div class="mb-4" *ngFor="let habilidad of habilidades">

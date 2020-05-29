@@ -5,6 +5,7 @@ import { Habilidad } from './interfaces/habilidad.interface';
 import { Trabajo } from './interfaces/trabajo.interface';
 import { Freelance } from './interfaces/freelance.interface';
 import { Educacion } from './interfaces/educacion.interface';
+import { PersonalService } from './services/personal.service';
 
 @Component({
   selector: 'app-root',
@@ -13,22 +14,25 @@ import { Educacion } from './interfaces/educacion.interface';
 })
 export class AppComponent implements OnInit {
 
-  habilidades: Habilidad[] = [];
-  experienciaLaboral: Trabajo[] = [];
-  freelances: Freelance[] = [];
-  educacion: Educacion[] = [];
+  public habilidades: Habilidad[] = [];
+  public experienciaLaboral: Trabajo[] = [];
+  public freelances: Freelance[] = [];
+  public educacion: Educacion[] = [];
+  public personal;
 
   constructor(
-    private _habiliadesService: HabilidadesService,
-    private _experienciaService: ExperienciaService) {
+    private habiliadesService: HabilidadesService,
+    private experienciaService: ExperienciaService,
+    private personalService: PersonalService) {
 
   }
 
   ngOnInit() {
-    this.habilidades = this._habiliadesService.getHabilidades();
-    this.experienciaLaboral = this._experienciaService.getExperienciaLaboral();
-    this.freelances = this._experienciaService.getFreelances();
-    this.educacion = this._experienciaService.getEducacion();
+    this.habilidades = this.habiliadesService.getHabilidades();
+    this.experienciaLaboral = this.experienciaService.getExperienciaLaboral();
+    this.freelances = this.experienciaService.getFreelances();
+    this.educacion = this.experienciaService.getEducacion();
+    this.personal = this.personalService.getPersonalInfo();
   }
 
 }
