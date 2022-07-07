@@ -37,11 +37,11 @@ export class ExperienciaService {
         nombre: 'Brewer Map',
         lugar: 'CDMX, México',
         // tslint:disable-next-line: max-line-length
-        descripcion: 'Proyecto personal. Desarrollo multiplataroma. Diseño, creación y mantenimiento de blog WordPress, app MEAN stack, redes sociales y contenidos.',
+        descripcion: 'Proyecto personal. Desarrollo multiplataroma. Diseño, creación y mantenimiento de blog Ghost, backend Strapi, front-end Angular 14, redes sociales y contenidos.',
         inicio: '2017-07-01T00:00:00Z',
         final: '2020-08-01T00:00:00Z',
         color: '#e5eded',
-        tecnologias: ['Angular', 'NodeJS/Restify/Express', 'MongoDB/Mongoose']
+        tecnologias: ['Angular', 'NodeJS/Restify/Express', 'MongoDB/Mongoose', 'Strapi']
       },
       {
         nombre: 'Brewer Map @ Home',
@@ -106,9 +106,9 @@ export class ExperienciaService {
         nombre: 'Globant',
         puesto: 'WebUI Developer',
         lugar: 'CDMX, México',
-        descripcion: 'Desarrollo Front-End para el proyecto DESK de Realogy',
+        descripcion: 'Desarrollo Front-End para el proyecto DESK de Realogy. Migración plataforma AngularJS a Angular 11 para Warner Media, HBO.',
         inicio: '2020-01-01T00:00:00Z',
-        final: '2020-08-01T00:00:00Z',
+        final: '2022-08-01T00:00:00Z',
         color: '#011f4b',
         tecnologias: ['Angular', 'SCSS', 'GraphQL', 'Unit Testing']
       },
