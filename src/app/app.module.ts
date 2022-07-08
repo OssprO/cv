@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
 
 // Services
 import { HabilidadesService } from './services/habilidades.service';
@@ -20,12 +21,14 @@ import { EducacionComponent } from './components/educacion/educacion.component';
     EducacionComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    HttpClientModule
   ],
   providers: [
     HabilidadesService,
     ExperienciaService,
-    PersonalService
+    PersonalService,
+    HttpClient
   ],
   bootstrap: [
     AppComponent
