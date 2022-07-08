@@ -1,24 +1,26 @@
 <div class="container">
-  <div class="row">
+  <div class="row" *ngIf="cvInfo$ | async as cv">
     <div class="col-12 col-md-8 py-5">
-      <h1>{{personal.nombre}}</h1>
+      <h1>{{cv.personal.nombre}}</h1>
 
       <div class="cv-black-boxes-wrapper">
-
-        <div class="cv-black-box" *ngFor="let escuela of educacion">
+        <div class="cv-black-box" *ngFor="let escuela of cv.educacion">
           <p class="text-lvl1 subtitle">{{escuela.escuela}}</p>
           <p class="text-lvl1 subtitle">{{escuela.lugar}}</p>
           <p class="text-lvl2 title"><strong>{{escuela.titulo}}</strong></p>
           <p class="text-lvl2">Cédula {{escuela.cedula}}</p>
         </div>
-
       </div>
 
-      <app-time-circle></app-time-circle>
+      <app-time-circle 
+        [educacion]="cv.educacion" 
+        [freelances]="cv.freelances"
+        [experienciaLaboral]="cv.experienciaLaboral"></app-time-circle>
 
       <p class="text-lvl1 title">Experiencia Laboral</p>
 
-      <div class="row my-3" *ngFor="let trabajo of experienciaLaboral">
+    
+      <div class="row my-3" *ngFor="let trabajo of cv.experienciaLaboral">
         <div class="col-color" [style.background]="trabajo.color"></div>
         <div class="col">
           <div class="row">
@@ -36,10 +38,11 @@
           </div>
         </div>
       </div>
+    
 
       <p class="text-lvl1 title">Freelance / Proyectos Personales</p>
-
-      <div class="row my-3" *ngFor="let freelance of freelances">
+      
+      <div class="row my-3" *ngFor="let freelance of cv.freelances">
         <div class="col-color" [style.background]="freelance.color"></div>
         <div class="col">
           <div class="row">
@@ -54,26 +57,27 @@
           </div>
         </div>
       </div>
+    
 
     </div>
     <div class="col-12 col-md-4 py-5 bg-light">
-      <h5 class="py-2">{{personal.puesto}}</h5>
-      <p class="text-lvl1">32 años</p>
-      <p class="text-lvl1"><a [href]="'tel:521' + personal.telefono">{{personal.telefono}}</a></p>
-      <p class="text-lvl1">{{personal.residencia}}</p>
-      <p class="text-lvl1"><a [href]="'mailto:'+ personal.email">{{personal.email}}</a></p>
+      <h5 class="py-2">{{cv.personal.puesto}}</h5>
+      <p class="text-lvl1">35 años</p>
+      <p class="text-lvl1"><a [href]="'tel:521' + cv.personal.telefono">{{cv.personal.telefono}}</a></p>
+      <p class="text-lvl1">{{cv.personal.residencia}}</p>
+      <p class="text-lvl1"><a [href]="'mailto:'+ cv.personal.email">{{cv.personal.email}}</a></p>
       <br>
-      <p class="text-lvl2">{{personal.presentacion}}</p>
+      <p class="text-lvl2">{{cv.personal.presentacion}}</p>
       <br>
-      <p class="text-lvl2">{{personal.resumen}}</p>
+      <p class="text-lvl2">{{cv.personal.resumen}}</p>
       <br>
       <p class="text-lvl1 title">Idiomas</p>
-      <p class="text-lvl2" *ngFor="let idioma of personal.idiomas">
+      <p class="text-lvl2" *ngFor="let idioma of cv.personal.idiomas">
         <strong>{{idioma.nombre}}</strong>: {{idioma.nivel}}
       </p>
       <br>
 
-      <div class="mb-4" *ngFor="let habilidad of habilidades">
+      <div class="mb-4" *ngFor="let habilidad of cv.habilidades">
         <p class="text-lvl1 title">{{habilidad.nombre}}</p>
 
 

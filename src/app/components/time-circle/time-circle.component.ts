@@ -1,13 +1,26 @@
-import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
+import { Component, OnInit, ViewChild, ElementRef, Input, AfterContentInit } from '@angular/core';
 import { ExperienciaService } from '../../services/experiencia.service';
 import { Mathematical } from '../../models/mathematical';
+import { combineLatest, forkJoin, Observable } from 'rxjs';
+import { Experiencia } from '../../interfaces/experiencia.interface';
+import { tap } from 'rxjs/operators';
+import { Educacion } from '../../interfaces/educacion.interface';
+import { Trabajo } from '../../interfaces/trabajo.interface';
+import { Freelance } from '../../interfaces/freelance.interface';
 
 @Component({
   selector: 'app-time-circle',
   templateUrl: './time-circle.component.html',
   styleUrls: ['./time-circle.component.scss']
 })
-export class TimeCircleComponent implements OnInit {
+export class TimeCircleComponent implements OnInit, AfterContentInit {
+
+  @Input()
+  public educacion: Educacion[];
+  @Input()
+  public experienciaLaboral: Trabajo[];
+  @Input()
+  public freelances: Freelance[];
 
   @ViewChild('TimeCircle', { static: true }) timeCircle: ElementRef;
   private timeCircleContext: CanvasRenderingContext2D;
@@ -18,19 +31,28 @@ export class TimeCircleComponent implements OnInit {
   private ADJUSTMENT = -40;
 
   protected initialYear = 2005; // TODO: Calculate this automatically
-  protected finalYear = 2020; // TODO: Calculate this automatically
+  protected finalYear = 2022; // TODO: Calculate this automatically
   protected difYears: number;
   protected gradosYear: number;
 
-  private experiencia: any;
 
-  constructor( private _experienciaService: ExperienciaService) { }
+  constructor() { }
 
   ngOnInit() {
     this.timeCircleContext = (this.timeCircle.nativeElement as HTMLCanvasElement).getContext('2d');
-    this.experiencia = this._experienciaService.getExperiencia();
     this.drawYearLines();
-    this.parseData(this.experiencia);
+  }
+
+  ngAfterContentInit(): void {
+    for (const e of this.educacion) {
+      this.drawArc( this.RADIO * 0.80, this.RADIO * 0.065, e.color, e.inicio, e.final );
+    }
+    for (const f of this.freelances) {
+      this.drawArc( this.RADIO * 0.725, this.RADIO * 0.05, f.color, f.inicio, f.final );
+    }
+    for (const t of this.experienciaLaboral) {
+      this.drawArc( this.RADIO * 0.90, this.RADIO * 0.10, t.color, t.inicio, t.final );
+    }
   }
 
   private drawYearLines() {
@@ -60,18 +82,6 @@ export class TimeCircleComponent implements OnInit {
       this.timeCircleContext.fillText(currentYear.toString(), x1 - 5, y1);
 
       currentYear++;
-    }
-  }
-
-  private parseData(data) {
-    for (const educacion of this._experienciaService.getEducacion()) {
-      this.drawArc( this.RADIO * 0.80, this.RADIO * 0.065, educacion.color, educacion.inicio, educacion.final );
-    }
-    for (const freelance of this._experienciaService.getFreelances()) {
-      this.drawArc( this.RADIO * 0.725, this.RADIO * 0.05, freelance.color, freelance.inicio, freelance.final );
-    }
-    for (const trabajo of this._experienciaService.getExperienciaLaboral()) {
-      this.drawArc( this.RADIO * 0.90, this.RADIO * 0.10, trabajo.color, trabajo.inicio, trabajo.final );
     }
   }
 

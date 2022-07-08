@@ -5,6 +5,6 @@ export interface Trabajo {
   descripcion: string;
   inicio: string;
   final: string;
-  color: string;
+  color?: string;
   tecnologias: string[];
 }

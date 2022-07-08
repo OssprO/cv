@@ -1,246 +1,31 @@
+import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { BehaviorSubject, Observable, Subject, throwError } from 'rxjs';
+import { catchError, shareReplay, tap } from 'rxjs/operators';
 import { Habilidad } from '../interfaces/habilidad.interface';
 
 @Injectable()
 export class HabilidadesService {
 
-  private skillsObj: Habilidad[] = [
-    {
-      nombre: 'Lenguajes y frameworks',
-      skills: [
-        {
-          nombre: 'HTML / HTML5',
-          porcentaje: 85
-        },
-        {
-          nombre: 'CSS3 / Flexbox / Grid',
-          porcentaje: 85,
-          skills: [
-            {
-              nombre: 'Bootstrap',
-              porcentaje: 90
-            },
-            {
-              nombre: 'Tailwind',
-              porcentaje: 40
-            }
-          ]
-        },
-        {
-          nombre: 'Javascript',
-          porcentaje: 70,
-          skills: [
-            {
-              nombre: 'AngularJS',
-              porcentaje: 80
-            },
-            {
-              nombre: 'Angular 2+',
-              porcentaje: 90
-            },
-            {
-              nombre: 'jQuery',
-              porcentaje: 20
-            },
-            {
-              nombre: 'Node / Restify / Express',
-              porcentaje: 40
-            },
-            {
-              nombre: 'Polymer / LitElement',
-              porcentaje: 40
-            },
-            {
-              nombre: 'React',
-              porcentaje: 10
-            },
-            {
-              nombre: 'Vue.js',
-              porcentaje: 25
-            }
-          ]
-        },
-        {
-          nombre: 'AS3/Flex/AIR',
-          porcentaje: 90
-        },
-        {
-          nombre: 'PHP',
-          porcentaje: 60,
-          skills: [
-            {
-              nombre: 'WordPress',
-              porcentaje: 90,
-            }
-          ]
-        },
-        {
-          nombre: 'Mobile',
-          porcentaje: 0,
-          skills: [
-            {
-              nombre: 'Ionic',
-              porcentaje: 75
-            },
-            {
-              nombre: 'Swift',
-              porcentaje: 15
-            }
-          ]
-        }
-      ]
-    },
-    {
-      nombre: 'Bases de Datos',
-      skills: [
-        {
-          nombre: 'MySQL',
-          porcentaje: 85
-        },
-        {
-          nombre: 'SQL Server',
-          porcentaje: 30
-        },
-        {
-          nombre: 'SQL Lite',
-          porcentaje: 80
-        },
-        {
-          nombre: 'MongoDB / Mongoose',
-          porcentaje: 70
-        },
-        {
-          nombre: 'GraphQL',
-          porcentaje: 50
-        },
-        {
-          nombre: 'Firebase',
-          porcentaje: 30
-        }
-      ]
-    },
-    {
-      nombre: 'Diseño',
-      skills: [
-        {
-          nombre: 'Photoshop',
-          porcentaje: 90
-        },
-        {
-          nombre: 'Illustrator',
-          porcentaje: 85
-        },
-        {
-          nombre: 'InDesign',
-          porcentaje: 85
-        },
-        {
-          nombre: 'Sketch',
-          porcentaje: 40
-        }
-      ]
-    },
-    {
-      nombre: 'Herramientas',
-      skills: [
-        {
-          nombre: 'Typescript',
-          porcentaje: 0
-        },
-        {
-          nombre: 'Grunt / Gulp / Webpack',
-          porcentaje: 0
-        },
-        {
-          nombre: 'Bower / NPM',
-          porcentaje: 0
-        },
-        {
-          nombre: 'SASS / LESS',
-          porcentaje: 0
-        },
-        {
-          nombre: 'Git: Github, Gitlab y Bitbucket',
-          porcentaje: 0
-        },
-        {
-          nombre: 'Yeoman',
-          porcentaje: 0
-        },
-        {
-          nombre: 'Sublime Text / Atom / Visual Studio Code',
-          porcentaje: 0
-        }
-      ]
-    },
-    {
-      nombre: 'Plataformas y Tecnologías',
-      skills: [
-        {
-          nombre: 'Samsung Smart TV: Tizen',
-          porcentaje: 0
-        },
-        {
-          nombre: 'Interfaces Multitouch: Displax, PQLabs',
-          porcentaje: 0
-        },
-        {
-          nombre: 'Arduino',
-          porcentaje: 0
-        },
-        {
-          nombre: 'Raspberry Pi',
-          porcentaje: 0
-        },
-        {
-          nombre: 'Docker',
-          porcentaje: 0
-        },
-        {
-          nombre: 'Mac OS X / Linux Ubuntu / Windows',
-          porcentaje: 0
-        }
-      ]
-    },
-    {
-      nombre: 'Otros',
-      skills: [
-        {
-          nombre: 'Office / iWork / Libre Office',
-          porcentaje: 0
-        },
-        {
-          nombre: 'Newsletters y Mailing',
-          porcentaje: 0
-        },
-        {
-          nombre: 'Google Analytics',
-          porcentaje: 0
-        },
-        {
-          nombre: 'API Google Maps',
-          porcentaje: 0
-        },
-        {
-          nombre: 'Configuración de Servidores (SSH, FTP, DNS, EmailServer, Usuarios, Permisos)',
-          porcentaje: 0
-        },
-        {
-          nombre: 'Facebook Pages',
-          porcentaje: 0
-        },
-        {
-          nombre: 'Edición de Video y Audio (After Effects, Audition)',
-          porcentaje: 0
-        }
-      ]
-    }
-  ];
+  private subject = new Subject<Habilidad[]>();
+  private habilidades$: Observable<Habilidad[]> = this.subject.asObservable();
+  
+  constructor(private httpClient: HttpClient) {
+    const loadedhabilidades$ = this.httpClient.get<Habilidad[]>('assets/data/habilidades.json')
+      .pipe(
+          shareReplay(),
+          catchError(err => {
+              const message = 'Could not load EXPERIENCIA';
+              console.error(message, err);
+              return throwError(err);
+          }),
+          tap(habilidades => this.subject.next(habilidades))
+      );
+    loadedhabilidades$.subscribe();
+  }
 
-  constructor() { }
-
-  getHabilidades() {
-    return this.skillsObj;
+  getHabilidades(): Observable<Habilidad[]> {
+    return this.habilidades$;
   }
 
 }
