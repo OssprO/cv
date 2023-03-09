@@ -1,0 +1,12 @@
+{
+    "AGE": "years old",
+    "LANGUAGES": "Languages",
+    "PROGRAMMING_LANGUAGES": "Programming languages & frameworks",
+    "DATA_BASES": "Database management",
+    "DESIGN_TOOLS": "Design tools",
+    "OTHER_TOOLS": "Other tools",
+    "PLATFORMS": "Platforms & technologies",
+    "OTHER": "Other",
+    "WORKING_EXPERIENCE": "Working experience",
+    "FREELANCE": "Freelance / Personal projects"
+}

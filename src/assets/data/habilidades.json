@@ -1,6 +1,6 @@
 [
     {
-      "nombre": "Lenguajes y frameworks",
+      "nombre": "PROGRAMMING_LANGUAGES",
       "skills": [
         {
           "nombre": "HTML / HTML5",
@@ -85,7 +85,7 @@
       ]
     },
     {
-      "nombre": "Bases de Datos",
+      "nombre": "DATA_BASES",
       "skills": [
         {
           "nombre": "MySQL",
@@ -114,7 +114,7 @@
       ]
     },
     {
-      "nombre": "Diseño",
+      "nombre": "DESIGN_TOOLS",
       "skills": [
         {
           "nombre": "Photoshop",
@@ -135,7 +135,7 @@
       ]
     },
     {
-      "nombre": "Herramientas",
+      "nombre": "OTHER_TOOLS",
       "skills": [
         {
           "nombre": "Typescript",
@@ -168,7 +168,7 @@
       ]
     },
     {
-      "nombre": "Plataformas y Tecnologías",
+      "nombre": "PLATFORMS",
       "skills": [
         {
           "nombre": "Samsung Smart TV: Tizen",
@@ -197,7 +197,7 @@
       ]
     },
     {
-      "nombre": "Otros",
+      "nombre": "OTHER",
       "skills": [
         {
           "nombre": "Office / iWork / Libre Office",

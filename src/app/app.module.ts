@@ -4,7 +4,7 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
 
 // Services
 import { HabilidadesService } from './services/habilidades.service';
-import { ExperienciaService } from './services/experiencia.service';
+import { ExperienciaService } from './services/experience.service';
 import { PersonalService } from './services/personal.service';
 
 // Components
@@ -12,7 +12,13 @@ import { AppComponent } from './app.component';
 import { TimeCircleComponent } from './components/time-circle/time-circle.component';
 import { ExperienciaComponent } from './components/experiencia/experiencia.component';
 import { EducacionComponent } from './components/educacion/educacion.component';
+import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
+import { TranslateHttpLoader } from '@ngx-translate/http-loader';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
+export function HttpLoaderFactory(http: HttpClient) {
+  return new TranslateHttpLoader(http);
+}
 @NgModule({
   declarations: [
     AppComponent,
@@ -22,7 +28,16 @@ import { EducacionComponent } from './components/educacion/educacion.component';
   ],
   imports: [
     BrowserModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule,
+    ReactiveFormsModule,
+    TranslateModule.forRoot({
+      loader: {
+          provide: TranslateLoader,
+          useFactory: HttpLoaderFactory,
+          deps: [HttpClient]
+      }
+  })
   ],
   providers: [
     HabilidadesService,

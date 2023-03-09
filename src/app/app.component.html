@@ -1,8 +1,17 @@
 <div class="container">
   <div class="row" *ngIf="cvInfo$ | async as cv">
     <div class="col-12 col-md-8 py-5">
-      <h1>{{cv.personal.nombre}}</h1>
-
+      <div class="row">
+        <div class="col-10"><h1>{{cv.personal.nombre}}</h1></div>
+        <div class="col-2">
+          <form [formGroup]="langSelectionForm">
+            <select formControlName="language">
+              <option *ngFor="let lang of langList" [value]="lang">{{lang}}</option>
+            </select>
+          </form>
+        </div>
+      </div>
+      
       <div class="cv-black-boxes-wrapper">
         <div class="cv-black-box" *ngFor="let escuela of cv.educacion">
           <p class="text-lvl1 subtitle">{{escuela.escuela}}</p>
@@ -17,9 +26,8 @@
         [freelances]="cv.freelances"
         [experienciaLaboral]="cv.experienciaLaboral"></app-time-circle>
 
-      <p class="text-lvl1 title">Experiencia Laboral</p>
+      <p class="text-lvl1 title">{{'WORKING_EXPERIENCE' | translate}}</p>
 
-    
       <div class="row my-3" *ngFor="let trabajo of cv.experienciaLaboral">
         <div class="col-color" [style.background]="trabajo.color"></div>
         <div class="col">
@@ -39,8 +47,7 @@
         </div>
       </div>
     
-
-      <p class="text-lvl1 title">Freelance / Proyectos Personales</p>
+      <p class="text-lvl1 title">{{'FREELANCE' | translate}}</p>
       
       <div class="row my-3" *ngFor="let freelance of cv.freelances">
         <div class="col-color" [style.background]="freelance.color"></div>
@@ -58,11 +65,10 @@
         </div>
       </div>
     
-
     </div>
     <div class="col-12 col-md-4 py-5 bg-light">
       <h5 class="py-2">{{cv.personal.puesto}}</h5>
-      <p class="text-lvl1">35 años</p>
+      <p class="text-lvl1">{{edad}} años</p>
       <p class="text-lvl1"><a [href]="'tel:521' + cv.personal.telefono">{{cv.personal.telefono}}</a></p>
       <p class="text-lvl1">{{cv.personal.residencia}}</p>
       <p class="text-lvl1"><a [href]="'mailto:'+ cv.personal.email">{{cv.personal.email}}</a></p>
@@ -71,15 +77,14 @@
       <br>
       <p class="text-lvl2">{{cv.personal.resumen}}</p>
       <br>
-      <p class="text-lvl1 title">Idiomas</p>
+      <p class="text-lvl1 title">{{ 'LANGUAGES' | translate}}</p>
       <p class="text-lvl2" *ngFor="let idioma of cv.personal.idiomas">
         <strong>{{idioma.nombre}}</strong>: {{idioma.nivel}}
       </p>
       <br>
 
       <div class="mb-4" *ngFor="let habilidad of cv.habilidades">
-        <p class="text-lvl1 title">{{habilidad.nombre}}</p>
-
+        <p class="text-lvl1 title">{{habilidad.nombre | translate}}</p>
 
         <div *ngFor="let skill of habilidad.skills">
           <div class="row" *ngIf="skill.porcentaje > 0">

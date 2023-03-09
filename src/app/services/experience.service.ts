@@ -28,7 +28,7 @@ export class ExperienciaService {
   }
 
   getExperiencia(): Observable<Experiencia> {
-    return this.experience$.pipe(tap(console.log));
+    return this.experience$;
   }
 
   getEducacion(): Observable<Educacion[]> {

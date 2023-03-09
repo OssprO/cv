@@ -1,6 +1,6 @@
 import { Component, OnInit, ViewChild, ElementRef, Input, AfterContentInit } from '@angular/core';
-import { ExperienciaService } from '../../services/experiencia.service';
-import { Mathematical } from '../../models/mathematical';
+import { ExperienciaService } from '../../services/experience.service';
+import { Mathematical } from '../../classes/mathematical.class';
 import { combineLatest, forkJoin, Observable } from 'rxjs';
 import { Experiencia } from '../../interfaces/experiencia.interface';
 import { tap } from 'rxjs/operators';
@@ -31,7 +31,7 @@ export class TimeCircleComponent implements OnInit, AfterContentInit {
   private ADJUSTMENT = -40;
 
   protected initialYear = 2005; // TODO: Calculate this automatically
-  protected finalYear = 2022; // TODO: Calculate this automatically
+  protected finalYear = 2023; // TODO: Calculate this automatically
   protected difYears: number;
   protected gradosYear: number;
 
