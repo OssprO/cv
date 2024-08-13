@@ -1,3 +1,7 @@
+export interface Idioma {
+    nombre: string;
+    nivel: string;
+}
 export interface Personal {
     nombre: string;
     nacimiento: string;
@@ -11,8 +15,5 @@ export interface Personal {
         id: string,
         link: string
     }[];
-    idiomas: {
-        nombre: string,
-        nivel: string
-    }[];
+    idiomas: Idioma[];
 }

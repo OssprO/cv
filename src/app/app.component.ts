@@ -2,11 +2,11 @@ import { Component, OnInit } from '@angular/core';
 import { HabilidadesService } from './services/habilidades.service';
 import { ExperienciaService } from './services/experiencia.service';
 import { PersonalService } from './services/personal.service';
-import { combineLatest, forkJoin, Observable } from 'rxjs';
+import { combineLatest, Observable } from 'rxjs';
 import { map, take } from 'rxjs/operators';
 
 @Component({
-  selector: 'app-root',
+  selector: 'cv-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
