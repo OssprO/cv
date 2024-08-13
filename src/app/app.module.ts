@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { HttpClient, provideHttpClient, withInterceptorsFromDi } from '@angular/common/http';
 
 // Services
 import { HabilidadesService } from './services/habilidades.service';
@@ -13,25 +13,19 @@ import { TimeCircleComponent } from './components/time-circle/time-circle.compon
 import { ExperienciaComponent } from './components/experiencia/experiencia.component';
 import { EducacionComponent } from './components/educacion/educacion.component';
 
-@NgModule({
-  declarations: [
-    AppComponent,
-    TimeCircleComponent,
-    ExperienciaComponent,
-    EducacionComponent
-  ],
-  imports: [
-    BrowserModule,
-    HttpClientModule
-  ],
-  providers: [
-    HabilidadesService,
-    ExperienciaService,
-    PersonalService,
-    HttpClient
-  ],
-  bootstrap: [
-    AppComponent
-  ]
-})
+@NgModule({ declarations: [
+        AppComponent,
+        TimeCircleComponent,
+        ExperienciaComponent,
+        EducacionComponent
+    ],
+    bootstrap: [
+        AppComponent
+    ], imports: [BrowserModule], providers: [
+        HabilidadesService,
+        ExperienciaService,
+        PersonalService,
+        HttpClient,
+        provideHttpClient(withInterceptorsFromDi())
+    ] })
 export class AppModule { }
