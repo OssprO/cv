@@ -72,18 +72,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "cv-osspro:build"
+            "buildTarget": "cv-osspro:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "cv-osspro:build:production"
+              "buildTarget": "cv-osspro:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "cv-osspro:build"
+            "buildTarget": "cv-osspro:build"
           }
         },
         "test": {
