@@ -1,7 +1,4 @@
 export abstract class Mathematical {
-
-  constructor() {}
-
   public static radians(grados: number): number {
     return grados * Math.PI / 180;
   }

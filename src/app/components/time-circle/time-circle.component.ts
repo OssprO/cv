@@ -1,15 +1,11 @@
 import { Component, OnInit, ViewChild, ElementRef, Input, AfterContentInit } from '@angular/core';
-import { ExperienciaService } from '../../services/experiencia.service';
-import { Mathematical } from '../../models/mathematical';
-import { combineLatest, forkJoin, Observable } from 'rxjs';
-import { Experiencia } from '../../interfaces/experiencia.interface';
-import { tap } from 'rxjs/operators';
+import { Mathematical } from '../../classes/mathematical';
 import { Educacion } from '../../interfaces/educacion.interface';
 import { Trabajo } from '../../interfaces/trabajo.interface';
 import { Freelance } from '../../interfaces/freelance.interface';
 
 @Component({
-  selector: 'app-time-circle',
+  selector: 'cv-time-circle',
   templateUrl: './time-circle.component.html',
   styleUrls: ['./time-circle.component.scss']
 })
