@@ -1,5 +1,9 @@
+:root {
+  --bs-font-sans-serif: "Open Sans", sans-serif !important;
+}
+
 body {
-  font-family: "Open Sans";
+  font-family: var(--bs-font-sans-serif);
 }
 
 #elCanvas {
@@ -9,26 +13,48 @@ body {
 }
 
 h1, h4, h5 {
-  font-family: "Open Sans" !important;
+  // font-family: "Open Sans" !important;
   font-weight: 600;
 }
 
+a.link-effect1 {
+  text-decoration: none;
+  color: #18272F;
+  font-weight: 600;
+  position: relative;
+  &::before {
+    content: '';
+    background-color: rgba(#96C1E0, 0.5);
+    position: absolute;
+    left: 0;
+    bottom: 2px;
+    width: 100%;
+    height: 8px;
+    z-index: -1;
+    transition: all .15s ease-in-out;
+  }
+  &:hover::before {
+    bottom: 0;
+    height: 100%;
+  }
+}
+
 p.text-lvl1 {
-  font-family: "Open Sans";
-  font-size: 18px;
+  // font-family: "Open Sans";
+  font-size: 1.15rem;
   font-weight: 300;
   margin: 0;
   &.title {
     font-weight: 400;
   }
   &.subtitle {
-    font-size: 14px;
+    font-size: 0.95rem;
     font-weight: 400;
   }
 }
 p.text-lvl2 {
-  font-family: "Open Sans";
-  font-size: 14px;
+  // font-family: "Open Sans";
+  font-size: 1rem;
   font-weight: 300;
   margin: 0;
   &.title {
@@ -37,11 +63,19 @@ p.text-lvl2 {
 }
 
 p.text-lvl3 {
-  font-family: "Open Sans";
-  font-size: 10px;
+  // font-family: "Open Sans";
+  font-size: 0.85rem;
   font-weight: 300;
   margin: 0;
   margin-top: 4px;
+}
+
+p.text-lvl4 {
+  // font-family: "Open Sans";
+  font-size: 0.65rem;
+  font-weight: 300;
+  margin: 0;
+  margin-top: 2px;
 }
 
 .progress {
@@ -58,8 +92,9 @@ p.text-lvl3 {
 }
 
 .col-color {
-  width: 15px;
+  width: 0.5rem !important;
   background-color: black;
+  padding: 0 !important;
 }
 
 .cv-black-boxes-wrapper {
@@ -77,3 +112,17 @@ p.text-lvl3 {
   color:  white;
   display: block;
 }
+
+
+@media print {
+  html {
+    font-size: 62.5%;
+    margin: 0.15in 0.35in 0.25in 0.35in;
+  }
+  @page {
+    size: 8.5in 16.25in;
+  }
+  .col-color, .progress-bar, .badge {
+    print-color-adjust: exact;
+  }
+} 

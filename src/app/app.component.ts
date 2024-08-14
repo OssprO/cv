@@ -13,6 +13,12 @@ import { map, take } from 'rxjs/operators';
 export class AppComponent implements OnInit {
 
   public cvInfo$: Observable<any>;
+  public edad: number = Math.floor(
+    (
+      new Date().getTime() - new Date('1987-03-05').getTime()
+    )/(
+      1000 * 60 * 60 * 24 * 365.25
+    ));
 
   constructor(
     private habiliadesService: HabilidadesService,
