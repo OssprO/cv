@@ -1,13 +1,13 @@
 {
   "name": "cv-osspro",
-  "version": "1.0.3",
+  "version": "1.1.0",
   "license": "MIT",
   "scripts": {
     "ng": "ng",
     "start": "ng serve --port 05137",
     "build": "ng build --configuration production",
     "build:gpages": "ng build --configuration production --base-href \"https://osspro.github.io/cv/\"",
-    "publish:gpages": "npx angular-cli-ghpages --dir=dist/cv-osspro",
+    "publish:gpages": "npx angular-cli-ghpages --dir=dist/cv-osspro/browser",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e"
