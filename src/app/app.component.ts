@@ -21,12 +21,16 @@ export class AppComponent implements OnInit {
       1000 * 60 * 60 * 24 * 365.25
     ));
 
+  public locale: string;
+
   constructor(
     private habiliadesService: HabilidadesService,
     private experienciaService: ExperienciaService,
     private personalService: PersonalService,
     private translate: TranslateService
-  ) { }
+  ) {
+    this.locale = 'es_MX';
+  }
 
   ngOnInit() {
     this.cvInfo$ = combineLatest([
@@ -42,6 +46,11 @@ export class AppComponent implements OnInit {
         personal
       }))
     );
+
+    this.translate.onLangChange
+      .subscribe((langChangeEvent: LangChangeEvent) => {
+          this.locale = langChangeEvent.lang;
+      });
   }
 
   public downloadCV(): void {

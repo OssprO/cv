@@ -1,12 +1,12 @@
 {
-    "nombre": "Jesús Osiel Hernández González",
+    "nombre": "Jesus Osiel Hernandez Gonzalez",
     "nacimiento": "1987-03-05T03:15:00Z",
-    "puesto": "ISC - Programador Front-End",
+    "puesto": "Web UI Developer",
     "telefono": "5532291215",
-    "residencia": "Ciudad de México, México",
+    "residencia": "Mexico City, Mexico",
     "email": "ossprodiseno@gmail.com",
-    "presentacion": "Programador con amplia experiencia en desarrollo Front-End, especializado en Angular y Typescript. Tengo experiencia en desarrollo de aplicaciones web y PWAs. Así mismo cuento con conocimientos generales de bases de datos, servidores y tecnologías backend.",
-    "resumen": "Me gusta el rock progresivo, la ciencia ficción, el futbol, las artes plásticas y visuales además de la cinematrografía. Me apasiona la astronomía y los avances científicos y tecnológicos. Se hacer cerveza a nivel profesional, tengo título como Técnico Cervecero.",
+    "presentacion": "Experienced Web UI Developer with over a decade of expertise in front-end development, specializing in Angular, ReactJS, and WordPress. Proven track record in leading projects, improving application performance, and increasing unit test coverage. Adept at migrating legacy systems and implementing scalable solutions. Strong background in team leadership, technical analysis, and process improvement.",
+    "resumen": "I like progressive rock, science fiction, soccer, plastic and visual arts, as well as cinematography. I am passionate about astronomy and scientific and technological advancements. I know how to brew beer at a professional level and have a degree as a Brewing Technician.",
     "social": [
       {
         "id": "",
@@ -15,12 +15,12 @@
     ],
     "idiomas": [
       {
-        "nombre": "Inglés",
+        "nombre": "English",
         "nivel": "B2"
       },
       {
-        "nombre": "Español",
-        "nivel": "Nativo"
+        "nombre": "Spanish",
+        "nivel": "Native"
       }
     ]
 }

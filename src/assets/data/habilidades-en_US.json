@@ -1,6 +1,6 @@
 [
     {
-      "nombre": "Lenguajes y frameworks",
+      "nombre": "Lenguages & Frameworks",
       "skills": [
         {
           "nombre": "HTML / HTML5",
@@ -21,7 +21,7 @@
           ]
         },
         {
-          "nombre": "Javascript",
+          "nombre": "JavaScript",
           "porcentaje": 80,
           "skills": [
             {
@@ -85,7 +85,7 @@
       ]
     },
     {
-      "nombre": "Bases de Datos",
+      "nombre": "Data Bases",
       "skills": [
         {
           "nombre": "MySQL",
@@ -114,7 +114,7 @@
       ]
     },
     {
-      "nombre": "Diseño",
+      "nombre": "Design",
       "skills": [
         {
           "nombre": "Photoshop",
@@ -135,7 +135,7 @@
       ]
     },
     {
-      "nombre": "Herramientas",
+      "nombre": "Tools",
       "skills": [
         {
           "nombre": "Typescript",
@@ -162,20 +162,20 @@
           "porcentaje": 0
         },
         {
-          "nombre": "Sublime Text / Atom / Visual Studio Code",
+          "nombre": "Sublime Text / Atom / VS Code",
           "porcentaje": 0
         }
       ]
     },
     {
-      "nombre": "Plataformas y Tecnologías",
+      "nombre": "Platforms & Technologies",
       "skills": [
         {
           "nombre": "Samsung Smart TV: Tizen",
           "porcentaje": 0
         },
         {
-          "nombre": "Interfaces Multitouch: Displax, PQLabs",
+          "nombre": "Multitouch Interfaces: Displax, PQLabs",
           "porcentaje": 0
         },
         {
@@ -197,14 +197,14 @@
       ]
     },
     {
-      "nombre": "Otros",
+      "nombre": "Others",
       "skills": [
         {
           "nombre": "Office / iWork / Libre Office",
           "porcentaje": 0
         },
         {
-          "nombre": "Newsletters y Mailing",
+          "nombre": "Newsletters and Mailing",
           "porcentaje": 0
         },
         {
@@ -216,7 +216,7 @@
           "porcentaje": 0
         },
         {
-          "nombre": "Configuración de Servidores (SSH, FTP, DNS, EmailServer, Usuarios, Permisos)",
+          "nombre": "Servers Configurations (SSH, FTP, DNS, EmailServer, Users, Permissions)",
           "porcentaje": 0
         },
         {
@@ -224,7 +224,7 @@
           "porcentaje": 0
         },
         {
-          "nombre": "Edición de Video y Audio (After Effects, Audition)",
+          "nombre": "Video and Audio Editing (After Effects, Audition)",
           "porcentaje": 0
         }
       ]

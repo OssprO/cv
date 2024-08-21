@@ -1,185 +1,317 @@
 {
-    "educacion": [
-      {
-        "escuela": "Instituto Tecnológico de Durango",
-        "lugar": "Durango, Dgo. México",
-        "titulo": "Ingeniería en Sistemas Computacionales",
-        "cedula": "8500626",
-        "inicio": "2006-01-01T00:00:00Z",
-        "final": "2010-06-01T00:00:00Z",
-        "color": "#090909"
-      },
-      {
-        "escuela": "CBTIS 130",
-        "lugar": "Durango, Dgo. México",
-        "titulo": "Técnico en Computación",
-        "cedula": "5183946",
-        "inicio": "2005-01-01T00:00:00Z",
-        "final": "2005-12-01T00:00:00Z",
-        "color": "#090909"
-      }
-    ],
-    "freelance": [
-      {
-        "nombre": "Brewer Map",
-        "lugar": "CDMX, México",
-        "descripcion": "Proyecto personal. Desarrollo multiplataroma. Diseño, creación y mantenimiento de blog Ghost, backend Strapi, front-end Angular 17, redes sociales y contenidos.",
-        "inicio": "2017-07-01T00:00:00Z",
-        "final": "2024-07-01T00:00:00Z",
-        "color": "#178b76",
-        "tecnologias": [
-          "Angular",
-          "Strapi",
-          "NgRx",
-          "Patrones de Diseño"
-        ]
-      },
-      {
-        "nombre": "GICSA",
-        "lugar": "CDMX, México",
-        "descripcion": "Maquetación y adaptación resposiva de GICSA MagazINe.",
-        "inicio": "2017-04-01T00:00:00Z",
-        "final": "2017-06-01T00:00:00Z",
-        "color": "#004c4c",
-        "tecnologias": [
-          "SCSS",
-          "HTML5"
-        ]
-      },
-      {
-        "nombre": "Mercedes Trophy",
-        "lugar": "CDMX, México",
-        "descripcion": "Maquetación, adaptación resposiva y posterior adaptación a theme de WordPress para sitio Mercedes Trophy México 2016.",
-        "inicio": "2016-04-01T00:00:00Z",
-        "final": "2016-06-01T00:00:00Z",
-        "color": "#006666",
-        "tecnologias": [
-          "WordPress",
-          "SCSS"
-        ]
-      },
-      {
-        "nombre": "CONAGUA",
-        "lugar": "CDMX, México",
-        "descripcion": "Diseño y programación de sistema de búsqueda de documentos de la Comisión Nacional del Agua (Flex/AIR/SQLLite).",
-        "inicio": "2012-03-01T00:00:00Z",
-        "final": "2013-01-01T00:00:00Z",
-        "color": "#008080",
-        "tecnologias": [
-          "AS3/Flex/AIR",
-          "SQLLite"
-        ]
-      },
-      {
-        "nombre": "YEAL/Artefacto",
-        "lugar": "Durango, Dgo. México",
-        "descripcion": "Prácticas profesionales, desarrollo y diseño del juego ‘PokTaPok’ para iPhone y iPod Touch.  Subcontrato de la empresa de creación multimedia Artefacto Studio.",
-        "inicio": "2010-01-01T00:00:00Z",
-        "final": "2010-07-01T00:00:00Z",
-        "color": "#66b2b2",
-        "tecnologias": [
-          "Photoshop",
-          "Unity3D",
-          "C#"
-        ]
-      }
-    ],
-    "trabajo": [
-      {
-        "nombre": "Globant",
-        "puesto": "WebUI Developer",
-        "lugar": "CDMX, México",
-        "descripcion": "Front-End development for the Realogy DESK project. Migration of the platform from AngularJS to Angular 11 for Warner Media, HBO. Maintenance of digital platforms at Royal Caribbean.",
-        "inicio": "2020-01-01T00:00:00Z",
-        "final": "2024-07-01T00:00:00Z",
-        "color": "#011f4b",
-        "tecnologias": [
-          "Angular",
-          "TypeScript",
-          "SCSS",
-          "GraphQL",
-          "Unit Testing",
-          "React",
-          "Jira",
-          "Web Components"
-        ]
-      },
-      {
-        "nombre": "GFT México",
-        "puesto": "Líder Front-End / Desarrollador Front-End ",
-        "lugar": "CDMX, México",
-        "descripcion": "Líder técnico Front-End para proyecto Santander Móvil, al frente de 6 células de trabajo y responsable de integración y despliegue de una app híbrida para iOS y Android. Desarrollo Front-End de plataforma iBrain. Proyecto Cells BBVBA Bancomer.",
-        "inicio": "2018-03-05T00:00:00Z",
-        "final": "2019-12-01T00:00:00Z",
-        "color": "#03396c",
-        "tecnologias": [
-          "Polymer",
-          "Angular",
-          "SCSS",
-          "JavaScript",
-          "Jira",
-          "CI/CD",
-          "Patrones de Diseño",
-          "Web Components"
-        ]
-      },
-      {
-        "nombre": "Apernet S.A. / Minimalist Technology",
-        "puesto": "Desarrollador Front-End",
-        "lugar": "CDMX, México",
-        "descripcion": "Desarrollo Smart TV, administrador y creador de contenido de la comunidad de desarrolladores Samsung Smart TV. Desarrollo y diseño web, creación de temas y plugins para WordPress. Desarrollo Mobile Ionic y Phonegaph. Desarrollo MEAN Stack.",
-        "inicio": "2013-09-01T00:00:00Z",
-        "final": "2018-02-28T00:00:00Z",
-        "color": "#005b96",
-        "tecnologias": [
-          "Ionic",
-          "WordPress",
-          "AngularJS",
-          "Tizen OS"
-        ]
-      },
-      {
-        "nombre": "Denumeris Interactive",
-        "puesto": "Desarrollador Interactivo",
-        "lugar": "CDMX, México",
-        "descripcion": "Desarrollo multimedia, programación de interfaces multitouch para muros y pantallas interactivas , así como aplicaciones móviles. Creación de sitios web y aplicaciones de escritorio Flash/ActionScript/Flex. Programación del modulo interactivo Periscopio en el Museo de Arte Contemporaneo de la UNAM.",
-        "inicio": "2010-10-01T00:00:00Z",
-        "final": "2013-08-01T00:00:00Z",
-        "color": "#6497b1",
-        "tecnologias": [
-          "AS3/Flex/AIR",
-          "Swift",
-          "SVN",
-          "Arduino"
-        ]
-      },
-      {
-        "nombre": "Departamento de Desarrollo de Sistemas y Administración de Información Secretaría de Educación, Estado de Durango.",
-        "puesto": "Desarrollador",
-        "lugar": "Durango, Dgo. México",
-        "descripcion": "Desarrollo y diseño de aplicaciones y sistemas administrativos para control y mantenimiento de bases de datos.",
-        "inicio": "2010-01-01T00:00:00Z",
-        "final": "2010-09-01T00:00:00Z",
-        "color": "#b3cde0",
-        "tecnologias": [
-          "PHP",
-          "HTML",
-          "CSS"
-        ]
-      },
-      {
-        "nombre": "Oficina de Asesoría en Modernización y Tecnologías de Información Gobierno Municipal de Durango",
-        "puesto": "Desarrollador/Diseñador Web",
-        "lugar": "Durango, Dgo. México",
-        "descripcion": "Realización de presentaciones multimedia para diversas dependencias de gobierno, video streaming, contenido interactivo Flash en el sitio, diseño gráfico y maquetación, fotografía y edición fotográfica, diseño de elementos para diversos sistemas de información.",
-        "inicio": "2007-11-01T00:00:00Z",
-        "final": "2008-11-01T00:00:00Z",
-        "color": "#4b86b4",
-        "tecnologias": [
-          "AS3/Flex/AIR",
-          "Illustrator",
-          "Photoshop"
-        ]
-      }
-    ]
+  "educacion": [
+    {
+      "escuela": "Instituto Tecnológico de Durango",
+      "lugar": "Durango, Dgo. Mexico",
+      "titulo": "BS, Computer Systems Engineer",
+      "cedula": "8500626",
+      "inicio": "2006-01-01T00:00:00Z",
+      "final": "2010-06-01T00:00:00Z",
+      "color": "#090909"
+    },
+    {
+      "escuela": "CBTIS 130",
+      "lugar": "Durango, Dgo. Mexico",
+      "titulo": "Computer Technician",
+      "cedula": "5183946",
+      "inicio": "2005-01-01T00:00:00Z",
+      "final": "2005-12-01T00:00:00Z",
+      "color": "#090909"
+    }
+  ],
+  "freelance": [
+    {
+      "nombre": "Brewer Map",
+      "lugar": "Mexico City, Mexico",
+      "descripcion": [
+        "Designed, created, and maintained a Ghost blog.",
+        "Developed backend with Strapi, including custom components in React.",
+        "Developed nine applications in Angular 17.",
+        "Managed social media and created content."
+      ],
+      "inicio": "2017-07-01T00:00:00Z",
+      "final": "2024-07-01T00:00:00Z",
+      "color": "#178b76",
+      "tecnologias": [
+        "Angular",
+        "Strapi",
+        "NgRx",
+        "Patrones de Diseño"
+      ],
+      "imprimible": true
+    },
+    {
+      "nombre": "GICSA",
+      "lugar": "Mexico City, Mexico",
+      "descripcion": "Layout and responsive adaptation of GICSA MagazINe.",
+      "inicio": "2017-04-01T00:00:00Z",
+      "final": "2017-06-01T00:00:00Z",
+      "color": "#004c4c",
+      "tecnologias": [
+        "SCSS",
+        "HTML5"
+      ],
+      "imprimible": false
+    },
+    {
+      "nombre": "Mercedes Trophy",
+      "lugar": "Mexico City, Mexico",
+      "descripcion": "Layout, responsive adaptation and subsequent adaptation to WordPress theme for the Mercedes Trophy Mexico 2016 site.",
+      "inicio": "2016-04-01T00:00:00Z",
+      "final": "2016-06-01T00:00:00Z",
+      "color": "#006666",
+      "tecnologias": [
+        "WordPress",
+        "SCSS"
+      ],
+      "imprimible": false
+    },
+    {
+      "nombre": "CONAGUA",
+      "lugar": "Mexico City, Mexico",
+      "descripcion": "Design and programming of the National Water Commission's document search system (Flex/AIR/SQLLite).",
+      "inicio": "2012-03-01T00:00:00Z",
+      "final": "2013-01-01T00:00:00Z",
+      "color": "#008080",
+      "tecnologias": [
+        "AS3/Flex/AIR",
+        "SQLLite"
+      ],
+      "imprimible": false
+    },
+    {
+      "nombre": "YEAL/Artefacto",
+      "lugar": "Durango, Dgo. Mexico",
+      "descripcion": "Internship, development and design of the game ‘PokTaPok’ for iPhone and iPod Touch. Subcontracted by the multimedia creation company Artefacto Studio.",
+      "inicio": "2010-01-01T00:00:00Z",
+      "final": "2010-07-01T00:00:00Z",
+      "color": "#66b2b2",
+      "tecnologias": [
+        "Photoshop",
+        "Unity3D",
+        "C#"
+      ],
+      "imprimible": false
+    }
+  ],
+  "trabajo": [
+    {
+      "nombre": "Globant",
+      "puesto": "WebUI Developer",
+      "lugar": "Mexico City, Mexico",
+      "proyectos": [
+        {
+          "titulo": "Web UI Developer at Royal Caribbean",
+          "inicio": "2022-12-01T00:00:00Z",
+          "final": "2024-02-01T00:00:00Z",
+          "tareas": [
+            "Participated in maintaining and improving various applications, including those developed in ReactJS, Angular, and WordPress.",
+            "Implemented code improvements with SonarQube guidance.",
+            "Increased unit test coverage."
+          ]
+        },
+        {
+          "titulo": "Web UI Developer at Warner Media - Tower HBO",
+          "inicio": "2020-08-01T00:00:00Z",
+          "final": "2022-11-01T00:00:00Z",
+          "tareas": [
+            "Proposed and implemented the base architecture of the project to replace the legacy code.",
+            "Created a library of web components in Angular 11 used in the legacy code, speeding up the migration process.",
+            "Built a scalable SASS code base following the design system provided by UX.",
+            "Assisted with the migration of the Tower app from AngularJS to Angular 11."
+          ]
+        },
+        {
+          "titulo": "Web UI Developer at Realogy - Desk",
+          "inicio": "2020-02-01T00:00:00Z",
+          "final": "2020-07-01T00:00:00Z",
+          "tareas": [
+            "Proposed and implemented the division of the app into modules to improve loading times.",
+            "Raised unit test coverage to 90% across all code using Karma and Jasmine.",
+            "Assisted in constant updates of the Angular core, from Angular 4 to Angular 6 and later to Angular 8."
+          ]
+        }
+      ],
+      "descripcion": "",
+      "inicio": "2020-01-01T00:00:00Z",
+      "final": "2024-07-01T00:00:00Z",
+      "color": "#011f4b",
+      "tecnologias": [
+        "Angular",
+        "TypeScript",
+        "SCSS",
+        "GraphQL",
+        "Unit Testing",
+        "React",
+        "Jira",
+        "Web Components"
+      ],
+      "imprimible": true
+    },
+    {
+      "nombre": "GFT Mexico",
+      "puesto": "Front-End Tech Lead / Front-End Developer",
+      "lugar": "Mexico City, Mexico",
+      "proyectos": [
+        {
+          "titulo": "Front-End Tech Lead at Santander - Mobile App",
+          "inicio": "2018-10-01T00:00:00Z",
+          "final": "2019-12-01T00:00:00Z",
+          "tareas": [
+            "Led six work cells (approximately 16 people) on the integration (iOS and Android) and deployment of Santander Mexico’s new mobile hybrid version of the public application.",
+            "Analyzed technical and business documents.",
+            "Presented improvements in work processes.",
+            "Managed backlog administration and development team."
+          ]
+        },
+        {
+          "titulo": "BBVA - Cells Developer",
+          "inicio": "2018-03-01T00:00:00Z",
+          "final": "2018-09-01T00:00:00Z",
+          "tareas": [
+            "Participated in the project Cells as a front-end developer, creating web components and performing unit tests.",
+            "Mentored new team members."
+          ]
+        }
+      ],
+      "descripcion": "",
+      "inicio": "2018-03-05T00:00:00Z",
+      "final": "2019-12-01T00:00:00Z",
+      "color": "#03396c",
+      "tecnologias": [
+        "Polymer",
+        "Angular",
+        "SCSS",
+        "JavaScript",
+        "Jira",
+        "CI/CD",
+        "Patrones de Diseño",
+        "Web Components"
+      ],
+      "imprimible": true
+    },
+    {
+      "nombre": "Apernet S.A. / Minimalist Technology",
+      "puesto": "Front-End Developer",
+      "lugar": "Mexico City, Mexico",
+      "proyectos": [
+        {
+          "titulo": "Front-End Developer",
+          "inicio": "2017-07-05T00:00:00Z",
+          "final": "2018-02-05T00:00:00Z",
+          "tareas": [
+            "Developed front-end and API connections.",
+            "Designed UI and created layouts.",
+            "Integrated Cordova.",
+            "Integrated hybrid app for iOS & Android."
+          ]
+        },
+        {
+          "titulo": "Ideas Techo Crowdfunding",
+          "inicio": "2017-01-05T00:00:00Z",
+          "final": "2017-07-05T00:00:00Z",
+          "tareas": [
+            "Developed web UI.",
+            "Connected external and internal APIs."
+          ]
+        },
+        {
+          "titulo": "Ternium, Woolworth, Del Sol, Royal Canin, Waterhouse, SHCP, Merial",
+          "inicio": "2015-01-05T00:00:00Z",
+          "final": "2016-12-05T00:00:00Z",
+          "tareas": [
+            "Analyzed and defined product requirements.",
+            "Developed WordPress sites, plugins, and themes.",
+            "Designed UI and created layouts."
+          ]
+        },
+        {
+          "titulo": "Samsung - STAD",
+          "inicio": "2013-09-05T00:00:00Z",
+          "final": "2014-12-05T00:00:00Z",
+          "tareas": [
+            "Administered and created content for the Samsung Smart TV developers community in Mexico.",
+            "Presented and evaluated in the Smart TV app contest for universities in Mexico City."
+          ]
+        }
+      ],
+      "descripcion": "",
+      "inicio": "2013-09-01T00:00:00Z",
+      "final": "2018-02-28T00:00:00Z",
+      "color": "#005b96",
+      "tecnologias": [
+        "Ionic",
+        "WordPress",
+        "AngularJS",
+        "Tizen OS"
+      ],
+      "imprimible": true
+    },
+    {
+      "nombre": "Denumeris Interactive",
+      "puesto": "Interactive Developer",
+      "lugar": "Mexico City, Mexico",
+      "proyectos": [
+        {
+          "titulo": "Interactive Developer at Zibata - Multi Touch Wall",
+          "inicio": "2010-10-01T00:00:00Z",
+          "final": "2013-08-28T00:00:00Z",
+          "tareas": [
+            "Led development of Zibata’s interactive software installed on five multi-touch screens for sales purposes.",
+            "Installed, supervised, and maintained Idem multitouch frames."
+          ]
+        },
+        {
+          "titulo": "Interactive Developer at MUAC - Periscopio",
+          "inicio": "2012-01-01T00:00:00Z",
+          "final": "2012-09-28T00:00:00Z",
+          "tareas": [
+            "Developed interactive software for a multimedia platform with a multi-touch screen connected to a giant screen to display the museum’s heritage in video.",
+            "Participated in analysis, design of test plans, and use cases."
+          ]
+        }
+      ],
+      "descripcion": "",
+      "inicio": "2010-10-01T00:00:00Z",
+      "final": "2013-08-01T00:00:00Z",
+      "color": "#6497b1",
+      "tecnologias": [
+        "AS3/Flex/AIR",
+        "Swift",
+        "SVN",
+        "Arduino"
+      ],
+      "imprimible": true
+    },
+    {
+      "nombre": "Departamento de Desarrollo de Sistemas y Administración de Información Secretaría de Educación, Estado de Durango.",
+      "puesto": "Developer",
+      "lugar": "Durango, Dgo. Mexico",
+      "descripcion": "Development and design of applications and administrative systems for control and maintenance of databases.",
+      "inicio": "2010-01-01T00:00:00Z",
+      "final": "2010-09-01T00:00:00Z",
+      "color": "#b3cde0",
+      "tecnologias": [
+        "PHP",
+        "HTML",
+        "CSS"
+      ],
+      "imprimible": false
+    },
+    {
+      "nombre": "Office of Modernization and Information Technology Advisory Board Municipal Government of Durango",
+      "puesto": "Developer and Web Designer",
+      "lugar": "Durango, Dgo. Mexico",
+      "descripcion": "Creation of multimedia presentations for various government departments, video streaming, interactive Flash content on the site, graphic design and layout, photography and photo editing, design of elements for various information systems.",
+      "inicio": "2007-11-01T00:00:00Z",
+      "final": "2008-11-01T00:00:00Z",
+      "color": "#4b86b4",
+      "tecnologias": [
+        "AS3/Flex/AIR",
+        "Illustrator",
+        "Photoshop"
+      ],
+      "imprimible": false
+    }
+  ]
 }

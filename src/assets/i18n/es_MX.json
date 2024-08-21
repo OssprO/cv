@@ -3,5 +3,8 @@
     "Descargar": "Descargar",
     "Experiencia Laboral": "Experiencia Laboral",
     "Freelance": "Freelance / Proyectos Personales",
-    "Educación": "Educación"
+    "Educación": "Educación",
+    "Edad": "{{value}} años",
+    "Patrones de Diseño": "Patrones de Diseño",
+    "Cedula": "Cédula {{value}}"
 }
