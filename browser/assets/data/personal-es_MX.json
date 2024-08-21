@@ -1,0 +1,26 @@
+{
+    "nombre": "Jesús Osiel Hernández González",
+    "nacimiento": "1987-03-05T03:15:00Z",
+    "puesto": "ISC - Programador Front-End",
+    "telefono": "5532291215",
+    "residencia": "Ciudad de México, México",
+    "email": "ossprodiseno@gmail.com",
+    "presentacion": "Desarrollador Web UI con más de una década de experiencia en desarrollo front-end, especializado en Angular, ReactJS y WordPress. Historial comprobado en la dirección de proyectos, mejora del rendimiento de aplicaciones y aumento de la cobertura de pruebas unitarias. Experto en la migración de sistemas heredados e implementación de soluciones escalables. Sólida experiencia en liderazgo de equipos, análisis técnico y mejora de procesos.",
+    "resumen": "Me gusta el rock progresivo, la ciencia ficción, el futbol, las artes plásticas y visuales además de la cinematrografía. Me apasiona la astronomía y los avances científicos y tecnológicos. Se hacer cerveza a nivel profesional, tengo título como Técnico Cervecero.",
+    "social": [
+      {
+        "id": "",
+        "link": ""
+      }
+    ],
+    "idiomas": [
+      {
+        "nombre": "Inglés",
+        "nivel": "B2"
+      },
+      {
+        "nombre": "Español",
+        "nivel": "Nativo"
+      }
+    ]
+}
