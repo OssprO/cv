@@ -1,0 +1,26 @@
+{
+    "nombre": "Jesus Osiel Hernandez Gonzalez",
+    "nacimiento": "1987-03-05T03:15:00Z",
+    "puesto": "Web UI Developer",
+    "telefono": "5532291215",
+    "residencia": "Mexico City, Mexico",
+    "email": "ossprodiseno@gmail.com",
+    "presentacion": "Experienced Web UI Developer with over a decade of expertise in front-end development, specializing in Angular, ReactJS, and WordPress. Proven track record in leading projects, improving application performance, and increasing unit test coverage. Adept at migrating legacy systems and implementing scalable solutions. Strong background in team leadership, technical analysis, and process improvement.",
+    "resumen": "I like progressive rock, science fiction, soccer, plastic and visual arts, as well as cinematography. I am passionate about astronomy and scientific and technological advancements. I know how to brew beer at a professional level and have a degree as a Brewing Technician.",
+    "social": [
+      {
+        "id": "",
+        "link": ""
+      }
+    ],
+    "idiomas": [
+      {
+        "nombre": "English",
+        "nivel": "B2"
+      },
+      {
+        "nombre": "Spanish",
+        "nivel": "Native"
+      }
+    ]
+}

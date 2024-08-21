@@ -4,6 +4,7 @@ import { ExperienciaService } from './services/experiencia.service';
 import { PersonalService } from './services/personal.service';
 import { combineLatest, Observable } from 'rxjs';
 import { map, take } from 'rxjs/operators';
+import { LangChangeEvent, TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'cv-root',
@@ -20,24 +21,47 @@ export class AppComponent implements OnInit {
       1000 * 60 * 60 * 24 * 365.25
     ));
 
+  public locale: string;
+
   constructor(
     private habiliadesService: HabilidadesService,
     private experienciaService: ExperienciaService,
-    private personalService: PersonalService) { }
+    private personalService: PersonalService,
+    private translate: TranslateService
+  ) {
+    this.locale = 'es_MX';
+  }
 
   ngOnInit() {
     this.cvInfo$ = combineLatest([
       this.habiliadesService.getHabilidades(),
-      this.experienciaService.getExperienciaLaboral(),
-      this.experienciaService.getFreelances(),
-      this.experienciaService.getEducacion(),
+      this.experienciaService.getExperiencia(),
       this.personalService.getPersonalInfo()
     ]).pipe(
-      take(1),
-      map(([habilidades, experienciaLaboral, freelances, educacion, personal], index) => ({
-        habilidades, experienciaLaboral, freelances, educacion, personal
+      map(([habilidades, experiencia, personal], index) => ({
+        habilidades, 
+        experienciaLaboral: experiencia.trabajo, 
+        freelances: experiencia.freelance,
+        educacion: experiencia.educacion,
+        personal
       }))
     );
+
+    this.translate.onLangChange
+      .subscribe((langChangeEvent: LangChangeEvent) => {
+          this.locale = langChangeEvent.lang;
+      });
   }
 
+  public downloadCV(): void {
+    console.log('Descargar...');
+  }
+
+  public toggleLanguage(): void {
+    if (this.translate.currentLang === 'en_US') {
+      this.translate.use('es_MX');
+    } else {
+      this.translate.use('en_US');
+    }
+  }
 }

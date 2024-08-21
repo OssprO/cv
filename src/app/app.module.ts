@@ -1,6 +1,9 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import localeESMX from '@angular/common/locales/es-MX';
 import { HttpClient, provideHttpClient, withInterceptorsFromDi } from '@angular/common/http';
+import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
+import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 
 import { HabilidadesService } from './services/habilidades.service';
 import { ExperienciaService } from './services/experiencia.service';
@@ -10,6 +13,11 @@ import { AppComponent } from './app.component';
 import { TimeCircleComponent } from './components/time-circle/time-circle.component';
 import { ExperienciaComponent } from './components/experiencia/experiencia.component';
 import { EducacionComponent } from './components/educacion/educacion.component';
+import { registerLocaleData } from '@angular/common';
+
+export function createTranslateLoader(http: HttpClient) {
+    return new TranslateHttpLoader(http, './assets/i18n/', '.json');
+}
 
 @NgModule({ 
     declarations: [
@@ -19,7 +27,17 @@ import { EducacionComponent } from './components/educacion/educacion.component';
         EducacionComponent
     ],
     bootstrap: [AppComponent],
-    imports: [BrowserModule],
+    imports: [
+        BrowserModule,
+        TranslateModule.forRoot({
+            defaultLanguage: 'es_MX',
+            loader: {
+                provide: TranslateLoader,
+                useFactory: (createTranslateLoader),
+                deps: [HttpClient]
+            }
+        }),
+    ],
     providers: [
         HabilidadesService,
         ExperienciaService,
@@ -28,4 +46,8 @@ import { EducacionComponent } from './components/educacion/educacion.component';
         provideHttpClient(withInterceptorsFromDi())
     ]
 })
-export class AppModule { }
+export class AppModule {
+    constructor() {
+        registerLocaleData(localeESMX, 'es_MX');
+    }
+}
