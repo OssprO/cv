@@ -3,12 +3,16 @@ import { Mathematical } from '../../classes/mathematical';
 import { Educacion } from '../../interfaces/educacion.interface';
 import { Trabajo } from '../../interfaces/trabajo.interface';
 import { Freelance } from '../../interfaces/freelance.interface';
+import { CommonModule } from '@angular/common';
 
 @Component({
     selector: 'cv-time-circle',
     templateUrl: './time-circle.component.html',
     styleUrls: ['./time-circle.component.scss'],
-    standalone: false
+    standalone: true,
+    imports: [
+      CommonModule
+    ]
 })
 export class TimeCircleComponent implements OnInit, AfterContentInit {
 

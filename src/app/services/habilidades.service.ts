@@ -5,7 +5,9 @@ import { Observable, Subject, throwError } from 'rxjs';
 import { catchError, shareReplay, tap } from 'rxjs/operators';
 import { Habilidad } from '../interfaces/habilidad.interface';
 
-@Injectable()
+@Injectable({
+  providedIn: 'root'
+})
 export class HabilidadesService {
 
   private subject = new Subject<Habilidad[]>();

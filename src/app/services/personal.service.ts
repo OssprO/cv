@@ -6,7 +6,9 @@ import { catchError, map, shareReplay, tap } from 'rxjs/operators';
 import { Profile } from '../interfaces/personal.inteface';
 import { APISingleResponse } from '../interfaces/api.interface';
 import { environment } from '../../environments/environment';
-@Injectable()
+@Injectable({
+  providedIn: 'root'
+})
 export class PersonalService {
 
     private subject = new Subject<Profile>();
