@@ -30,7 +30,7 @@ export function createTranslateLoader(http: HttpClient) {
     imports: [
         BrowserModule,
         TranslateModule.forRoot({
-            defaultLanguage: 'es_MX',
+            defaultLanguage: 'es-MX',
             loader: {
                 provide: TranslateLoader,
                 useFactory: (createTranslateLoader),
@@ -48,6 +48,6 @@ export function createTranslateLoader(http: HttpClient) {
 })
 export class AppModule {
     constructor() {
-        registerLocaleData(localeESMX, 'es_MX');
+        registerLocaleData(localeESMX, 'es-MX');
     }
 }

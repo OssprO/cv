@@ -1,10 +1,14 @@
 {
     "i18n_button": "Version en Español",
+    "en-US": "English",
+    "es-MX": "Spanish",
     "Descargar": "Dowload",
     "Experiencia Laboral": "Career History",
     "Freelance": "Freelance / Personal Projects",
     "Educación": "Education",
     "Edad": "{{value}} years old",
     "Patrones de Diseño": "Design Patterns",
-    "Cedula": "Certificate {{value}}"
+    "Cedula": "Certificate {{value}}",
+    "PROFICIENT": "Proficient",
+    "NATIVE": "Native"
 }

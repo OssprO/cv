@@ -1,19 +1,29 @@
-export interface Idioma {
-    nombre: string;
-    nivel: string;
+export interface Social {
+    id: number;
+    network: string;
+    url: string;
 }
-export interface Personal {
-    nombre: string;
-    nacimiento: string;
-    puesto: string;
-    telefono: string;
-    residencia: string;
+
+export interface Language {
+    id: number;
+    language: string;
+    level: string;
+}
+export interface Profile {
+    id: number;
+    documentId?: string;
+    name: string;
+    birthdate: string;
+    position: string;
+    phone: string;
+    location: string;
     email: string;
-    presentacion: string;
-    resumen: string;
-    social: {
-        id: string,
-        link: string
-    }[];
-    idiomas: Idioma[];
+    summary: string;
+    aboutme: string;
+    social: Social[];
+    languages: Language[];
+    createdAt?: string;
+    updatedAt?: string;
+    publishedAt?: string;
+    locale?: string;
 }

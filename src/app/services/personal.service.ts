@@ -1,43 +1,49 @@
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpParams } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { LangChangeEvent, TranslateService } from '@ngx-translate/core';
 import { Observable, Subject, throwError } from 'rxjs';
-import { catchError, shareReplay, tap } from 'rxjs/operators';
-import { Personal } from '../interfaces/personal.inteface';
-
+import { catchError, map, shareReplay, tap } from 'rxjs/operators';
+import { Profile } from '../interfaces/personal.inteface';
+import { APISingleResponse } from '../interfaces/api.interface';
+import { environment } from '../../environments/environment';
 @Injectable()
 export class PersonalService {
 
-    private subject = new Subject<Personal>();
-    private personal$: Observable<Personal> = this.subject.asObservable();
+    private subject = new Subject<Profile>();
+    private personal$: Observable<Profile> = this.subject.asObservable();
     
     constructor(
         private httpClient: HttpClient,
         private translate: TranslateService
     ) {
         this.translate.onLangChange.subscribe((event: LangChangeEvent) => {
-            this.loadPersonal(event.lang);
+            this.loadProfile(event.lang);
         });
-        this.loadPersonal('es_MX');
+        this.loadProfile('es-MX');
     }
 
-    private loadPersonal(language: string): void {
-        const filePath = `assets/data/personal-${language}.json`;
+    private loadProfile(language: string): void {
+      const apiPath = `${environment.apiUrl}/profile`;
+      const params = new HttpParams()
+        .set('locale', language)
+        .set('populate[0]', 'social')
+        .set('populate[1]', 'languages');
 
-    this.httpClient.get<Personal>(filePath)
-      .pipe(
-        shareReplay(),
-        catchError(err => {
-          const message = 'Could not load PERSONAL';
-          console.error(message, err);
-          return throwError(err);
-        }),
-        tap(personal => this.subject.next(personal))
-      )
-      .subscribe();
+      this.httpClient.get<APISingleResponse<Profile>>(apiPath, { params })
+        .pipe(
+          shareReplay(),
+          catchError(err => {
+            const message = 'Could not load PROFILE';
+            console.error(message, err);
+            return throwError(err);
+          }),
+          map(personal => personal.data),
+          tap(personal => this.subject.next(personal))
+        )
+        .subscribe();
     }
 
-    getPersonalInfo(): Observable<Personal> {
+    getPersonalInfo(): Observable<Profile> {
         return this.personal$;
     }
 

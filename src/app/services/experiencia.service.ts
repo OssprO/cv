@@ -21,11 +21,11 @@ export class ExperienciaService {
     this.translate.onLangChange.subscribe((event: LangChangeEvent) => {
       this.loadExperience(event.lang);
     });
-    this.loadExperience('es_MX');
+    this.loadExperience('es-MX');
   }
 
   private loadExperience(language: string): void {
-    const filePath = `assets/data/experiencia-${language}.json`;
+    const filePath = `assets/data/experiencia_${language}.json`;
 
     this.httpClient.get<Experiencia>(filePath)
       .pipe(
