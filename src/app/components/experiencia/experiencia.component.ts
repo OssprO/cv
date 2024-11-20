@@ -4,6 +4,6 @@ import { Component } from '@angular/core';
     selector: 'cv-experiencia',
     templateUrl: './experiencia.component.html',
     styleUrls: ['./experiencia.component.scss'],
-    standalone: false
+    standalone: true
 })
 export class ExperienciaComponent { }

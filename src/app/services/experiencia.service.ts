@@ -8,7 +8,9 @@ import { Experiencia } from '../interfaces/experiencia.interface';
 import { Freelance } from '../interfaces/freelance.interface';
 import { Trabajo } from '../interfaces/trabajo.interface';
 
-@Injectable()
+@Injectable({
+  providedIn: 'root'
+})
 export class ExperienciaService {
 
   private subject = new Subject<Experiencia>();

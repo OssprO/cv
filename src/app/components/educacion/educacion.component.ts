@@ -4,6 +4,6 @@ import { Component } from '@angular/core';
     selector: 'cv-educacion',
     templateUrl: './educacion.component.html',
     styleUrls: ['./educacion.component.scss'],
-    standalone: false
+    standalone: true
 })
 export class EducacionComponent { }
