@@ -1,7 +1,7 @@
-@import "bootstrap";
+@use 'bootstrap' as *;
 
 :root {
-  --bs-font-sans-serif: "Open Sans", sans-serif !important;
+  --bs-font-sans-serif: 'Open Sans', sans-serif !important;
 }
 
 body {

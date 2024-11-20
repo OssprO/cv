@@ -5,9 +5,10 @@ import { Trabajo } from '../../interfaces/trabajo.interface';
 import { Freelance } from '../../interfaces/freelance.interface';
 
 @Component({
-  selector: 'cv-time-circle',
-  templateUrl: './time-circle.component.html',
-  styleUrls: ['./time-circle.component.scss']
+    selector: 'cv-time-circle',
+    templateUrl: './time-circle.component.html',
+    styleUrls: ['./time-circle.component.scss'],
+    standalone: false
 })
 export class TimeCircleComponent implements OnInit, AfterContentInit {
 
