@@ -18,11 +18,11 @@ export class HabilidadesService {
     this.translate.onLangChange.subscribe((event: LangChangeEvent) => {
       this.loadHabilidades(event.lang);
     });
-    this.loadHabilidades('es_MX');
+    this.loadHabilidades('es-MX');
   }
 
   private loadHabilidades(language: string): void {
-    const filePath = `assets/data/habilidades-${language}.json`;
+    const filePath = `assets/data/habilidades_${language}.json`;
 
     this.httpClient.get<Habilidad[]>(filePath)
       .pipe(

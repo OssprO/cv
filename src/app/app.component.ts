@@ -29,7 +29,7 @@ export class AppComponent implements OnInit {
     private personalService: PersonalService,
     private translate: TranslateService
   ) {
-    this.locale = 'es_MX';
+    this.locale = 'es-MX';
   }
 
   ngOnInit() {
@@ -58,10 +58,10 @@ export class AppComponent implements OnInit {
   }
 
   public toggleLanguage(): void {
-    if (this.translate.currentLang === 'en_US') {
-      this.translate.use('es_MX');
+    if (this.translate.currentLang === 'en-US') {
+      this.translate.use('es-MX');
     } else {
-      this.translate.use('en_US');
+      this.translate.use('en-US');
     }
   }
 }

@@ -1,10 +1,14 @@
 {
     "i18n_button": "English Version",
+    "en-US": "Inglés",
+    "es-MX": "Español",
     "Descargar": "Descargar",
     "Experiencia Laboral": "Experiencia Laboral",
     "Freelance": "Freelance / Proyectos Personales",
     "Educación": "Educación",
     "Edad": "{{value}} años",
     "Patrones de Diseño": "Patrones de Diseño",
-    "Cedula": "Cédula {{value}}"
+    "Cedula": "Cédula {{value}}",
+    "PROFICIENT": "B2",
+    "NATIVE": "Nativo"
 }

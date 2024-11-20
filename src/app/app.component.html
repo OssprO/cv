@@ -3,8 +3,8 @@
     <div class="col-career col-12 col-md-8 py-5">
       <div class="row mb-4">
         <div class="col-12 col-md-8">
-          <h1 class="h2">{{cv.personal.nombre}}</h1>
-          <h5 class="py-1">{{cv.personal.puesto}}</h5>
+          <h1 class="h2">{{cv.personal.name}}</h1>
+          <h5 class="py-1">{{cv.personal.position}}</h5>
           <div class="d-grid gap-2 d-md-block d-print-none">
             <a 
               [download]="'CV_Osiel_Hernandez_2024_'+locale" 
@@ -19,13 +19,13 @@
         </div>
         <div class="col-12 col-md-4 text-md-end">
           <p class="text-lvl1 my-0">{{ 'Edad' | translate: {value: edad} }}</p>
-          <p class="text-lvl1 my-0"><a class="link-effect1" [href]="'tel:+52' + cv.personal.telefono">{{cv.personal.telefono}}</a></p>
-          <p class="text-lvl1 my-0">{{cv.personal.residencia}}</p>
+          <p class="text-lvl1 my-0"><a class="link-effect1" [href]="'tel:+52' + cv.personal.phone">{{cv.personal.phone}}</a></p>
+          <p class="text-lvl1 my-0">{{cv.personal.location}}</p>
           <p class="text-lvl1 my-0"><a class="link-effect1" [href]="'mailto:'+ cv.personal.email">{{cv.personal.email}}</a></p>
         </div>
       </div>
 
-      <p class="text-lvl1 mb-4">{{cv.personal.presentacion}}</p>
+      <p class="text-lvl1 mb-4">{{cv.personal.summary}}</p>
 
       <p class="text-lvl1 title mb-4">{{ 'Experiencia Laboral' | translate }}</p>
 
@@ -128,11 +128,11 @@
         [experienciaLaboral]="cv.experienciaLaboral"></cv-time-circle>
       <br>
       <br>
-      <p class="text-lvl2">{{cv.personal.resumen}}</p>
+      <p class="text-lvl2">{{cv.personal.aboutme}}</p>
       <br>
       <p class="text-lvl1 title">Idiomas</p>
-      <p class="text-lvl2" *ngFor="let idioma of cv.personal.idiomas">
-        <strong>{{idioma.nombre}}</strong>: {{idioma.nivel}}
+      <p class="text-lvl2" *ngFor="let lang of cv.personal.languages">
+        <strong>{{lang.language | translate}}</strong>: {{lang.level | translate}}
       </p>
       <br>
 
