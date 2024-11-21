@@ -2,7 +2,7 @@ import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 
 import { TimeCircleComponent } from './time-circle.component';
 
-import { ExperienciaService } from '../../services/experiencia.service';
+import { ExperienceService } from '../../services/experience.service';
 
 describe('TimeCircleComponent', () => {
   let component: TimeCircleComponent;
@@ -14,7 +14,7 @@ describe('TimeCircleComponent', () => {
         TimeCircleComponent
       ],
       providers: [
-        ExperienciaService
+        ExperienceService
       ]
     })
     .compileComponents();
