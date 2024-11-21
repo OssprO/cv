@@ -1,18 +1,28 @@
 import { RichTextBlock } from "./api.interface";
 
-export interface Freelance {
+export interface Project {
+  id?: number;
+  name: string;
+  start: string;
+  end: string;
+  tasks: RichTextBlock[];
+}
+
+export interface Job {
   id?: number;
   documentId: string;
   name: string;
+  position: string;
   location: string;
-  description: RichTextBlock[];
+  description: string;
   start: string;
   end: string;
-  color: string;
+  color: string,
+  technologies: string[];
   printable: boolean;
+  projects?: Project[];
   createdAt?: string;
   updatedAt?: string;
   publishedAt?: string;
   locale: string;
-  technologies: string[];
 }

@@ -1,12 +1,13 @@
-import { Component, OnInit } from '@angular/core';
-import { HabilidadesService } from './services/habilidades.service';
-import { ExperienciaService } from './services/experiencia.service';
-import { PersonalService } from './services/personal.service';
-import { combineLatest, Observable } from 'rxjs';
-import { map, take } from 'rxjs/operators';
+import { Component } from '@angular/core';
+// import { SkillsService } from './services/skills.service';
+import { ExperienceService } from './services/experience.service';
+import { ProfileService } from './services/profile.service';
+import { forkJoin, Observable } from 'rxjs';
+import { switchMap } from 'rxjs/operators';
 import { LangChangeEvent, TranslateModule, TranslateService } from '@ngx-translate/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
+import { TimeCircleComponent } from './components/time-circle/time-circle.component';
 
 @Component({
     selector: 'cv-root',
@@ -16,10 +17,11 @@ import { RouterModule } from '@angular/router';
     imports: [
       CommonModule,
       RouterModule,
-      TranslateModule
+      TranslateModule,
+      TimeCircleComponent
     ]
 })
-export class AppComponent implements OnInit {
+export class AppComponent {
 
   public cvInfo$: Observable<any>;
   public edad: number = Math.floor(
@@ -32,37 +34,24 @@ export class AppComponent implements OnInit {
   public locale: string;
 
   constructor(
-    private habiliadesService: HabilidadesService,
-    private experienciaService: ExperienciaService,
-    private personalService: PersonalService,
+    // private skillsService: SkillsService,
+    private experienceService: ExperienceService,
+    private profileService: ProfileService,
     private translate: TranslateService
   ) {
     this.locale = 'es-MX';
-  }
-
-  ngOnInit() {
-    this.cvInfo$ = combineLatest([
-      this.habiliadesService.getHabilidades(),
-      this.experienciaService.getExperiencia(),
-      this.personalService.getPersonalInfo()
-    ]).pipe(
-      map(([habilidades, experiencia, personal], index) => ({
-        habilidades, 
-        experienciaLaboral: experiencia.trabajo, 
-        freelances: experiencia.freelance,
-        educacion: experiencia.educacion,
-        personal
-      }))
+    this.cvInfo$ = this.translate.onLangChange.pipe(
+      switchMap((langChangeEvent: LangChangeEvent) => {
+        const currentLang = langChangeEvent.lang;
+        return forkJoin({
+          education: this.experienceService.getEducacion(currentLang),
+          jobs: this.experienceService.getJobs(currentLang),
+          freelances: this.experienceService.getFreelances(currentLang),
+          profile: this.profileService.getProfile(currentLang),
+        });
+      })
     );
-
-    this.translate.onLangChange
-      .subscribe((langChangeEvent: LangChangeEvent) => {
-          this.locale = langChangeEvent.lang;
-      });
-  }
-
-  public downloadCV(): void {
-    console.log('Descargar...');
+    this.translate.use('es-MX');
   }
 
   public toggleLanguage(): void {

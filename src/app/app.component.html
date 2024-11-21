@@ -3,8 +3,8 @@
     <div class="col-career col-12 col-md-8 py-5">
       <div class="row mb-4">
         <div class="col-12 col-md-8">
-          <h1 class="h2">{{cv.personal.name}}</h1>
-          <h5 class="py-1">{{cv.personal.position}}</h5>
+          <h1 class="h2">{{cv.profile.name}}</h1>
+          <h5 class="py-1">{{cv.profile.position}}</h5>
           <div class="d-grid gap-2 d-md-block d-print-none">
             <a 
               [download]="'CV_Osiel_Hernandez_2024_'+locale" 
@@ -19,48 +19,50 @@
         </div>
         <div class="col-12 col-md-4 text-md-end">
           <p class="text-lvl1 my-0">{{ 'Edad' | translate: {value: edad} }}</p>
-          <p class="text-lvl1 my-0"><a class="link-effect1" [href]="'tel:+52' + cv.personal.phone">{{cv.personal.phone}}</a></p>
-          <p class="text-lvl1 my-0">{{cv.personal.location}}</p>
-          <p class="text-lvl1 my-0"><a class="link-effect1" [href]="'mailto:'+ cv.personal.email">{{cv.personal.email}}</a></p>
+          <p class="text-lvl1 my-0"><a class="link-effect1" [href]="'tel:+52' + cv.profile.phone">{{cv.profile.phone}}</a></p>
+          <p class="text-lvl1 my-0">{{cv.profile.location}}</p>
+          <p class="text-lvl1 my-0"><a class="link-effect1" [href]="'mailto:'+ cv.profile.email">{{cv.profile.email}}</a></p>
         </div>
       </div>
 
-      <p class="text-lvl1 mb-4">{{cv.personal.summary}}</p>
-
+      <p class="text-lvl1 mb-4">{{cv.profile.summary}}</p>
+      
       <p class="text-lvl1 title mb-4">{{ 'Experiencia Laboral' | translate }}</p>
-
-      @for(trabajo of cv.experienciaLaboral; track trabajo) {
-        <div class="row mt-2 mb-4" [ngClass]="{'d-print-none': !trabajo.imprimible }">
-          <div class="col-color" [style.background]="trabajo.color"></div>
+      
+      @for(job of cv.jobs; track job) {
+        <div class="row mt-2 mb-4" [ngClass]="{'d-print-none': !job.printable }">
+          <div class="col-color" [style.background]="job.color"></div>
           <section class="col">
             <div class="d-flex justify-content-between align-items-end mb-1">
               <div class="flex-shrink-1 w-50">
-                <p class="text-lvl1 title">{{ trabajo.nombre }}</p>
+                <p class="text-lvl1 title">{{ job.name }}</p>
               </div>
               <div class="text-end flex-grow-1">
-                <p class="text-lvl1 subtitle">{{ trabajo.puesto }} {{ trabajo.inicio | date:'y' }} - {{ trabajo.final | date:'y' }}</p>
+                <p class="text-lvl1 subtitle">{{ job.position }} {{ job.start | date:'y' }} - {{ job.end | date:'y' }}</p>
               </div>
             </div>
-            @if (trabajo.descripcion) {
+            @if (job.description) {
               <div class="row">
                 <div class="col-12">
-                  <p class="text-lvl2">{{ trabajo.descripcion }}</p>
+                  <p class="text-lvl2">{{ job.description }}</p>
                 </div>
               </div>
             }
-            @for (proyecto of trabajo.proyectos; track proyecto) {
+            @for (project of job.projects; track project) {
               <div class="row">
                 <div class="col-7">
-                  <p class="text-lvl1 subtitle my-1">{{ proyecto.titulo }}</p>
+                  <p class="text-lvl1 subtitle my-1">{{ project.name }}</p>
                 </div>
                 <div class="col-5 text-end">
-                  <p class="text-lvl1 subtitle ">{{ proyecto.inicio | date:'MMM. y':undefined:locale }} - {{ proyecto.final | date:'MMM. y':undefined:locale }}</p>
+                  <p class="text-lvl1 subtitle ">{{ project.start | date:'MMM. y':undefined:locale }} - {{ project.end | date:'MMM. y':undefined:locale }}</p>
                 </div>
               </div>
-              @for (tarea of proyecto.tareas; track tarea) {
+              @for (task of project.tasks; track task) {
                 <div class="row">
                   <div class="col-12">
-                    <p class="text-lvl2">{{ tarea }}</p>
+                    @for (paragraph of task.children; track paragraph) {
+                      <p class="text-lvl2">{{ paragraph.text }}</p>
+                    }
                   </div>
                 </div>
               }
@@ -68,53 +70,58 @@
             <div class="row mt-1">
               <div class="col text-md-end">
                 <span 
-                  *ngFor="let tecnologia of trabajo.tecnologias" 
+                  *ngFor="let technology of job.technologies" 
                   class="badge rounded-pill ms-1"
-                  [style.background]="trabajo.color">{{tecnologia | translate}}</span>
+                  [style.background]="job.color">{{technology | translate}}</span>
               </div>
             </div>
           </section>
         </div>
       }
-
+      
       <p class="text-lvl1 title mb-4">{{'Freelance' | translate}}</p>
       
       @for(freelance of cv.freelances; track freelance) {
-        <div class="row mt-2 mb-4" [ngClass]="{'d-print-none': !freelance.imprimible}">
+        <div class="row mt-2 mb-4" [ngClass]="{'d-print-none': !freelance.printable}">
           <div class="col-color" [style.background]="freelance.color"></div>
           <div class="col">
             <div class="row">
               <div class="col-12">
-                <p class="text-lvl1 title">{{ freelance.nombre }}</p>
+                <p class="text-lvl1 title">{{ freelance.name }}</p>
               </div>
             </div>
-            <div class="row">
-              <div class="col-12">
-                <p class="text-lvl2">{{ freelance.descripcion }}</p>
+            @for (description of freelance.description; track description) {
+              <div class="row">
+                <div class="col-12">
+                  @for (paragraph of description.children; track paragraph) {
+                    <p class="text-lvl2">{{ paragraph.text }}</p>
+                  }
+                </div>
               </div>
-            </div>
+            }
             <div class="row">
               <div class="col text-md-end">
                 <span 
-                  *ngFor="let tecnologia of freelance.tecnologias" 
+                  *ngFor="let technology of freelance.technologies" 
                   class="badge rounded-pill ms-1"
-                  [style.background]="freelance.color">{{tecnologia}}</span>
+                  [style.background]="freelance.color">{{technology}}</span>
               </div>
             </div>
           </div>
         </div>
       }
+
       <p class="text-lvl1 title mb-4">{{'Educación' | translate}}</p>
       
       <div class="row mt-2 mb-4" style="margin-left: -1.5rem;">
-        @for(escuela of cv.educacion; track escuela) {
+        @for(school of cv.education; track school) {
           <div class="col-6 d-flex">
-            <div class="col-color me-2" [style.background]="escuela.color"></div>
+            <div class="col-color me-2" [style.background]="school.color"></div>
             <div>
-              <p class="text-lvl1 title">{{escuela.escuela}}</p>
-              <p class="text-lvl1 subtitle">{{escuela.lugar}}</p>
-              <p class="text-lvl2 title"><strong>{{escuela.titulo}}</strong></p>
-              <p class="text-lvl2">{{ 'Cedula' | translate: { value: escuela.cedula} }}</p>
+              <p class="text-lvl1 title">{{school.school}}</p>
+              <p class="text-lvl1 subtitle">{{school.location}}</p>
+              <p class="text-lvl2 title"><strong>{{school.title}}</strong></p>
+              <p class="text-lvl2">{{ 'Cedula' | translate: { value: school.certificate} }}</p>
             </div>
           </div>
         }
@@ -123,19 +130,20 @@
 
     <div class="col-stats col-12 col-md-4 py-5 bg-light d-print-none">
       <cv-time-circle 
-        [educacion]="cv.educacion" 
+        [education]="cv.education" 
         [freelances]="cv.freelances"
-        [experienciaLaboral]="cv.experienciaLaboral"></cv-time-circle>
+        [jobs]="cv.jobs">
+      </cv-time-circle>
       <br>
       <br>
-      <p class="text-lvl2">{{cv.personal.aboutme}}</p>
+      <p class="text-lvl2">{{cv.profile.aboutme}}</p>
       <br>
       <p class="text-lvl1 title">Idiomas</p>
-      <p class="text-lvl2" *ngFor="let lang of cv.personal.languages">
+      <p class="text-lvl2" *ngFor="let lang of cv.profile.languages">
         <strong>{{lang.language | translate}}</strong>: {{lang.level | translate}}
       </p>
       <br>
-
+<!-- 
       <div class="mb-4" *ngFor="let habilidad of cv.habilidades">
         <p class="text-lvl1 title">{{habilidad.nombre}}</p>
 
@@ -171,8 +179,9 @@
               </div>
             </div>
           </div>
-        </div>
+        </div> 
       </div>
+       -->
     </div>
   </div>
 </div>

@@ -1,7 +1,7 @@
 import { Component, OnInit, ViewChild, ElementRef, Input, AfterContentInit } from '@angular/core';
 import { Mathematical } from '../../classes/mathematical';
-import { Educacion } from '../../interfaces/educacion.interface';
-import { Trabajo } from '../../interfaces/trabajo.interface';
+import { Education } from '../../interfaces/education.interface';
+import { Job } from '../../interfaces/job.interface';
 import { Freelance } from '../../interfaces/freelance.interface';
 import { CommonModule } from '@angular/common';
 
@@ -17,9 +17,9 @@ import { CommonModule } from '@angular/common';
 export class TimeCircleComponent implements OnInit, AfterContentInit {
 
   @Input()
-  public educacion: Educacion[];
+  public education: Education[];
   @Input()
-  public experienciaLaboral: Trabajo[];
+  public jobs: Job[];
   @Input()
   public freelances: Freelance[];
 
@@ -43,13 +43,13 @@ export class TimeCircleComponent implements OnInit, AfterContentInit {
 
   ngAfterContentInit(): void {
     for (const f of this.freelances) {
-      this.drawArc( this.RADIO * 0.525, this.RADIO * 0.075, f.color, f.inicio, f.final );
+      this.drawArc( this.RADIO * 0.525, this.RADIO * 0.075, f.color, f.start, f.end );
     }
-    for (const e of this.educacion) {
-      this.drawArc( this.RADIO * 0.65, this.RADIO * 0.075, e.color, e.inicio, e.final );
+    for (const e of this.education) {
+      this.drawArc( this.RADIO * 0.65, this.RADIO * 0.075, e.color, e.start, e.end );
     }
-    for (const t of this.experienciaLaboral) {
-      this.drawArc( this.RADIO * 0.82, this.RADIO * 0.15, t.color, t.inicio, t.final );
+    for (const j of this.jobs) {
+      this.drawArc( this.RADIO * 0.82, this.RADIO * 0.15, j.color, j.start, j.end );
     }
   }
 

@@ -3,12 +3,12 @@ import { Injectable } from '@angular/core';
 import { LangChangeEvent, TranslateService } from '@ngx-translate/core';
 import { Observable, Subject, throwError } from 'rxjs';
 import { catchError, shareReplay, tap } from 'rxjs/operators';
-import { Habilidad } from '../interfaces/habilidad.interface';
+import { Habilidad } from '../interfaces/hability.interface';
 
 @Injectable({
   providedIn: 'root'
 })
-export class HabilidadesService {
+export class SkillsService {
 
   private subject = new Subject<Habilidad[]>();
   private habilidades$: Observable<Habilidad[]> = this.subject.asObservable();

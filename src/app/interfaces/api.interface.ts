@@ -18,3 +18,13 @@ export interface APIResponse<T> {
     data: T[];
     meta: Meta;
 }
+
+interface ParagraphBlock {
+    type: 'text';
+    text: string;
+}
+export interface RichTextBlock {
+    id?: number;
+    type: 'paragraph';
+    children: ParagraphBlock[];
+}
