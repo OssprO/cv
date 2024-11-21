@@ -1,18 +1,15 @@
-import { RichTextBlock } from "./api.interface";
-
-export interface Freelance {
+export interface Education {
   id?: number;
   documentId: string;
-  name: string;
+  school: string;
   location: string;
-  description: RichTextBlock[];
+  title: string;
+  certificate: string;
   start: string;
   end: string;
   color: string;
-  printable: boolean;
   createdAt?: string;
   updatedAt?: string;
   publishedAt?: string;
   locale: string;
-  technologies: string[];
 }
