@@ -27,3 +27,16 @@ export interface Profile {
     publishedAt?: string;
     locale?: string;
 }
+
+export interface Skill {
+    id?: number;
+    name: string;
+    skills: SingleSkill[];
+}
+
+export interface SingleSkill {
+    id?: number;
+    name: string;
+    percentage: number;
+    skills?: SingleSkill[];
+}

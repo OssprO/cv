@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-// import { SkillsService } from './services/skills.service';
 import { ExperienceService } from './services/experience.service';
 import { ProfileService } from './services/profile.service';
 import { forkJoin, Observable } from 'rxjs';
@@ -8,6 +7,7 @@ import { LangChangeEvent, TranslateModule, TranslateService } from '@ngx-transla
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { TimeCircleComponent } from './components/time-circle/time-circle.component';
+import { SkillsService } from './services/skills.service';
 
 @Component({
     selector: 'cv-root',
@@ -34,7 +34,7 @@ export class AppComponent {
   public locale: string;
 
   constructor(
-    // private skillsService: SkillsService,
+    private skillsService: SkillsService,
     private experienceService: ExperienceService,
     private profileService: ProfileService,
     private translate: TranslateService
@@ -44,10 +44,11 @@ export class AppComponent {
       switchMap((langChangeEvent: LangChangeEvent) => {
         const currentLang = langChangeEvent.lang;
         return forkJoin({
-          education: this.experienceService.getEducacion(currentLang),
+          profile: this.profileService.getProfile(currentLang),
           jobs: this.experienceService.getJobs(currentLang),
           freelances: this.experienceService.getFreelances(currentLang),
-          profile: this.profileService.getProfile(currentLang),
+          education: this.experienceService.getEducacion(currentLang),
+          skills: this.skillsService.getSkills(currentLang)
         });
       })
     );

@@ -1,46 +1,33 @@
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpParams } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { LangChangeEvent, TranslateService } from '@ngx-translate/core';
-import { Observable, Subject, throwError } from 'rxjs';
-import { catchError, shareReplay, tap } from 'rxjs/operators';
-import { Habilidad } from '../interfaces/hability.interface';
+import { Observable, throwError } from 'rxjs';
+import { catchError, map, shareReplay, tap } from 'rxjs/operators';;
+import { Skill } from '../interfaces/profile.inteface';
+import { APIResponse } from '../interfaces/api.interface';
+import { environment } from '../../environments/environment';
 
 @Injectable({
   providedIn: 'root'
 })
 export class SkillsService {
+  constructor(private httpClient: HttpClient) { }
 
-  private subject = new Subject<Habilidad[]>();
-  private habilidades$: Observable<Habilidad[]> = this.subject.asObservable();
-  
-  constructor(
-    private httpClient: HttpClient,
-    private translate: TranslateService
-  ) {
-    this.translate.onLangChange.subscribe((event: LangChangeEvent) => {
-      this.loadHabilidades(event.lang);
-    });
-    this.loadHabilidades('es-MX');
-  }
-
-  private loadHabilidades(language: string): void {
-    const filePath = `assets/data/habilidades_${language}.json`;
-
-    this.httpClient.get<Habilidad[]>(filePath)
-      .pipe(
-        shareReplay(),
-        catchError(err => {
-          const message = 'Could not load HABILIADES';
-          console.error(message, err);
-          return throwError(err);
-        }),
-        tap(habilidades => this.subject.next(habilidades))
-      )
-      .subscribe();
-  }
-
-  getHabilidades(): Observable<Habilidad[]> {
-    return this.habilidades$;
+  getSkills(language: string): Observable<Skill[]> {
+    return this.httpClient.get<APIResponse<Skill>>(
+      `${environment.apiUrl}/skills`, { 
+        params: new HttpParams()
+          .set('locale', language)
+          .set('populate', 'skills.skills')
+        }
+    ).pipe(
+      shareReplay(),
+      catchError(err => {
+        const message = 'Could not load Skills';
+        console.error(message, err);
+        return throwError(() => new Error(message));
+      }),
+      map(profile => profile.data)
+    );
   }
 
 }
