@@ -103,7 +103,7 @@
         {
           "titulo": "Web UI Developer at Royal Caribbean",
           "inicio": "2022-12-01T00:00:00Z",
-          "final": "2024-02-01T00:00:00Z",
+          "final": "2024-03-01T00:00:00Z",
           "tareas": [
             "Participated in maintaining and improving various applications, including those developed in ReactJS, Angular, and WordPress.",
             "Implemented code improvements with SonarQube guidance.",
@@ -284,7 +284,7 @@
       "imprimible": true
     },
     {
-      "nombre": "Departamento de Desarrollo de Sistemas y Administración de Información Secretaría de Educación, Estado de Durango.",
+      "nombre": "Systems Development and Information Management Department, Secretariat of Education, State of Durango.",
       "puesto": "Developer",
       "lugar": "Durango, Dgo. Mexico",
       "descripcion": "Development and design of applications and administrative systems for control and maintenance of databases.",
