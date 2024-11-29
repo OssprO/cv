@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { ExperienceService } from './services/experience.service';
 import { ProfileService } from './services/profile.service';
 import { forkJoin, Observable } from 'rxjs';
-import { switchMap } from 'rxjs/operators';
+import { map, switchMap } from 'rxjs/operators';
 import { LangChangeEvent, TranslateModule, TranslateService } from '@ngx-translate/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
@@ -43,10 +43,21 @@ export class AppComponent {
     this.cvInfo$ = this.translate.onLangChange.pipe(
       switchMap((langChangeEvent: LangChangeEvent) => {
         const currentLang = langChangeEvent.lang;
+        this.locale = currentLang;
         return forkJoin({
           profile: this.profileService.getProfile(currentLang),
-          jobs: this.experienceService.getJobs(currentLang),
-          freelances: this.experienceService.getFreelances(currentLang),
+          jobs: this.experienceService.getJobs(currentLang).pipe(
+            map((jobs) => jobs.map(job => ({
+              ...job,
+              end: job.end ? job.end : new Date().toISOString()
+            })))
+          ),
+          freelances: this.experienceService.getFreelances(currentLang).pipe(
+            map((freelances) => freelances.map(freelance => ({
+              ...freelance,
+              end: freelance.end ? freelance.end : new Date().toISOString()
+            })))
+          ),
           education: this.experienceService.getEducacion(currentLang),
           skills: this.skillsService.getSkills(currentLang)
         });
