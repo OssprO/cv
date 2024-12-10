@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, signal } from '@angular/core';
 import { ExperienceService } from './services/experience.service';
 import { ProfileService } from './services/profile.service';
 import { forkJoin, Observable } from 'rxjs';
@@ -8,6 +8,18 @@ import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { TimeCircleComponent } from './components/time-circle/time-circle.component';
 import { SkillsService } from './services/skills.service';
+import { Profile, Skill } from './interfaces/profile.inteface';
+import { Job } from './interfaces/job.interface';
+import { Freelance } from './interfaces/freelance.interface';
+import { Education } from './interfaces/education.interface';
+
+interface CVData {
+  profile: Profile;
+  jobs: Job[];
+  freelances: Freelance[];
+  education: Education[];
+  skills: Skill[];
+}
 
 @Component({
     selector: 'cv-root',
@@ -23,7 +35,7 @@ import { SkillsService } from './services/skills.service';
 })
 export class AppComponent {
 
-  public cvInfo$: Observable<any>;
+  public cvInfo$: Observable<CVData>;
   public edad: number = Math.floor(
     (
       new Date().getTime() - new Date('1987-03-05').getTime()
@@ -31,7 +43,7 @@ export class AppComponent {
       1000 * 60 * 60 * 24 * 365.25
     ));
 
-  public locale: string;
+  public locale = signal('es-MX');
 
   constructor(
     private skillsService: SkillsService,
@@ -39,11 +51,10 @@ export class AppComponent {
     private profileService: ProfileService,
     private translate: TranslateService
   ) {
-    this.locale = 'es-MX';
     this.cvInfo$ = this.translate.onLangChange.pipe(
       switchMap((langChangeEvent: LangChangeEvent) => {
         const currentLang = langChangeEvent.lang;
-        this.locale = currentLang;
+        this.locale.set(currentLang);
         return forkJoin({
           profile: this.profileService.getProfile(currentLang),
           jobs: this.experienceService.getJobs(currentLang).pipe(
