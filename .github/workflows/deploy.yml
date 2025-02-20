@@ -37,7 +37,7 @@ jobs:
         env:
           API_TOKEN: ${{ secrets.API_TOKEN }}
         run: |
-          npm run build -- --configuration=production --base-href="/${{ github.event.repository.name }}/"
+          npm run build -- --configuration=production --base-href="https://osspro.github.io/${{ github.event.repository.name }}/"
         # Note: Adjust the base-href according to your repository name
 
       - name: Setup Pages

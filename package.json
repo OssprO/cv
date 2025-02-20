@@ -5,7 +5,7 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve --port 05137",
-    "build": "ng build --configuration production",
+    "build": "ng build",
     "build:gpages": "ng build --configuration production --base-href \"https://osspro.github.io/cv/\"",
     "publish:gpages": "npx angular-cli-ghpages --dir=dist/cv-osspro/browser",
     "test": "ng test",
