@@ -1,8 +1,7 @@
-import { RichTextBlock } from "./api.interface";
+import { ContentTypeBase, RichTextBlock } from "./api.interface";
+import { Technology } from "./technology.interface";
 
-export interface Freelance {
-  id?: number;
-  documentId: string;
+export interface Freelance extends ContentTypeBase  {
   name: string;
   location: string;
   description: RichTextBlock[];
@@ -10,9 +9,5 @@ export interface Freelance {
   end: string;
   color: string;
   printable: boolean;
-  createdAt?: string;
-  updatedAt?: string;
-  publishedAt?: string;
-  locale: string;
-  technologies: string[];
+  technologies: Technology[];
 }

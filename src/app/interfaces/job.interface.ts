@@ -1,4 +1,5 @@
-import { RichTextBlock } from "./api.interface";
+import { ContentTypeBase, RichTextBlock } from "./api.interface";
+import { Technology } from "./technology.interface";
 
 export interface Project {
   id?: number;
@@ -8,9 +9,7 @@ export interface Project {
   tasks: RichTextBlock[];
 }
 
-export interface Job {
-  id?: number;
-  documentId: string;
+export interface Job extends ContentTypeBase {
   name: string;
   position: string;
   location: string;
@@ -18,11 +17,7 @@ export interface Job {
   start: string;
   end: string;
   color: string,
-  technologies: string[];
+  technologies: Technology[];
   printable: boolean;
   projects?: Project[];
-  createdAt?: string;
-  updatedAt?: string;
-  publishedAt?: string;
-  locale: string;
 }

@@ -1,6 +1,6 @@
-export interface Education {
-  id?: number;
-  documentId: string;
+import { ContentTypeBase } from "./api.interface";
+
+export interface Education extends ContentTypeBase {
   school: string;
   location: string;
   title: string;
@@ -8,8 +8,4 @@ export interface Education {
   start: string;
   end: string;
   color: string;
-  createdAt?: string;
-  updatedAt?: string;
-  publishedAt?: string;
-  locale: string;
 }
