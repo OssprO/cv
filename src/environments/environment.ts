@@ -1,6 +1,5 @@
-declare const process: any;
 export const environment = {
   production: false,
   apiUrl: 'http://localhost:1337/api',
-  apiToken: process.env['API_TOKEN'] || ''
+  apiToken: '42b9707186ff76abd8b12ea0a6d10f4dd1a13c0771baceeeaa467b9fcd2e46d49b18281e26dd9d5634d2b8309a006b62406e55eab5971ce3afc7e36c1d03f6bf16bc301773d0d733a120e27a2b74c20ea186bce6678b00f6e4fece582b5f79552092d2f848a660245d5f965f2701433200011395e9bf460d3544e2f4ca137194'
 };
