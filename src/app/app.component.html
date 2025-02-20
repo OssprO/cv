@@ -72,7 +72,7 @@
                 <span 
                   *ngFor="let technology of job.technologies" 
                   class="badge rounded-pill ms-1"
-                  [style.background]="job.color">{{technology | translate}}</span>
+                  [style.background]="job.color">{{ technology.name }}</span>
               </div>
             </div>
           </section>
@@ -104,7 +104,7 @@
                 <span 
                   *ngFor="let technology of freelance.technologies" 
                   class="badge rounded-pill ms-1"
-                  [style.background]="freelance.color">{{technology}}</span>
+                  [style.background]="freelance.color">{{ technology.name }}</span>
               </div>
             </div>
           </div>

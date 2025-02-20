@@ -28,3 +28,12 @@ export interface RichTextBlock {
     type: 'paragraph';
     children: ParagraphBlock[];
 }
+
+export interface ContentTypeBase {
+    id: number;
+    documentId: string;
+    createdAt?: string;
+    updatedAt?: string;
+    publishedAt?: string;
+    locale?: string;
+}

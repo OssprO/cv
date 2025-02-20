@@ -15,7 +15,7 @@ export class ExperienceService {
   constructor(private httpClient: HttpClient) {}
 
   public getJobs(language: string): Observable<Job[]> {
-    return this.apiCall(language, 'jobs', 'projects');
+    return this.apiCall(language, 'jobs', ['projects','technologies']);
   }
 
   public getEducacion(language: string): Observable<Education[]> {
@@ -23,15 +23,17 @@ export class ExperienceService {
   }
 
   public getFreelances(language: string): Observable<Freelance[]> {
-    return this.apiCall(language, 'freelances');
+    return this.apiCall(language, 'freelances', ['technologies']);
   }
 
-  private apiCall(language: string, api: string, populate?: string): Observable<any> {
+  private apiCall(language: string, api: string, populate?: string[]): Observable<any> {
     let params = new HttpParams()
       .set('locale', language)
       .set('sort', 'end:desc');
     if (populate) {
-      params = params.append('populate[0]', populate);
+      for (let i = 0; i < populate.length; i++){
+        params = params.append(`populate[${i}]`, populate[i]);
+      } 
     }
     return this.httpClient.get<APIResponse<any>>(
       `${environment.apiUrl}/${api}`, 
