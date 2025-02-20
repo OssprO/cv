@@ -46,7 +46,7 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: './dist/cv/browser'  # Adjust this path to match your Angular 18 output directory
+          path: './dist/cv-osspro/browser'  # Adjust this path to match your Angular 18 output directory
 
   deploy:
     environment:
